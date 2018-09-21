@@ -1,6 +1,24 @@
-extends ../auth.layout.pug
-
-block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title WElcome
+    link(rel="stylesheet", href="main.min.css")
+  body
+  .wrapper
+    .container.welcomepage__container
+      .auth
+      .welcome
+        .welcome__container
+          .welcome__pic
+            img.welcome__img
+          .welcome__title
+          .welcome__txt
+          .welcome__socials
+            ul.welcome__socials-list
+              li.welcome__socials-link: a.welcome__socials-vk
+              li.welcome__socials-link: a.welcome__socials-github
+              li.welcome__socials-link: a.welcome__socials-inst
+      .copyright Это сделал я! 

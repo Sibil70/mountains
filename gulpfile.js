@@ -60,7 +60,7 @@ gulp.task("pug", () => {
   return gulp
     .src(`${config.VIEWS_DIR}/pages/*.pug`)
     .pipe($gp.plumber())
-    .pipe($gp.pug())
+    .pipe($gp.pug({ pretty: '\t' })) // Благодаря этой настройке наш HTML соберется не в одну строку, а красиво: со всеми нужными отступами
     .pipe(gulp.dest(`${config.DIST_DIR}`))
     .pipe(reload({ stream: true }));
 });
@@ -136,7 +136,7 @@ gulp.task(
   "default",
   gulp.series(
     "clean",
-    "svg",
+    // "svg",
     gulp.parallel("styles", "pug", "images", "fonts", "scripts"),
     gulp.parallel("watch", "server")
   )
@@ -147,7 +147,7 @@ gulp.task(
   "build",
   gulp.series(
     "clean",
-    "svg",
+    // "svg",
     gulp.parallel("styles", "pug", "images", "fonts", "scripts")
   )
 );
