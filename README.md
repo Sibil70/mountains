@@ -10,7 +10,7 @@
 * Bolotova Olga
 
 # GitPages
-* https://sibil70.github.io/mountains/public/
+* https://sibil70.github.io/mountains/dist/index.html
 
 ## Как установить проект
 1. Проверить установлены ли у вас node.js, npm 5;
