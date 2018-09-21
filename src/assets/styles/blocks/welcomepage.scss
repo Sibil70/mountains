@@ -16,7 +16,13 @@
     color: #fff;
     position: relative;
     top: 20px;
-    left: 90%;
+    left: 85%;
+    &:hover {
+        transition: 1s;
+        background: #fff;
+        color: #00bfa5;
+        cursor:pointer;
+    }
 }
 .welcome {
     width: 385px;
@@ -43,21 +49,24 @@
 .welcome__title{
     margin-top: 15px;
 }
-.welcome__socials {
+.socials {
     margin-top: 25px;
     width: 50%;
 }
-.welcome__socials-list{
+.socials__list{
     display: flex;
     justify-content: space-between;
 }
-.welcome__socials-icon{
+.socials__icon{
 display: block;
 width: 30px;
 height: 20px;
-fill: rgba(0, 191, 165, 0.5);
-&:hover{fill:rgba(0, 191, 165, 1)}
 cursor: pointer;
+fill: rgba(0, 191, 165, 0.5);
+    &:hover{
+    transition: 500ms;
+    fill:rgba(0, 191, 165, 1)
+}
 }
 .welcome__pages{
 display: flex;
@@ -79,6 +88,7 @@ border-right: rgba(230, 236, 236, 0.6) 2px solid;
         border: none;
     }
     &:hover{
+        transition: 500ms;
         background-color:  rgba(0, 150, 136, 0.8);
     }
 }
@@ -89,6 +99,7 @@ border-right: rgba(230, 236, 236, 0.6) 2px solid;
     transform: translate(-50%, -50%);
     white-space: nowrap;
     color: #fff;
+    text-decoration: none;
 }
 .copyright{
     color: #fff;
