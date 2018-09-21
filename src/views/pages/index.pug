@@ -9,16 +9,26 @@ html(lang="en")
   body
   .wrapper
     .container.welcomepage__container
-      .auth
+      .auth Авторизоваться
       .welcome
-        .welcome__container
+        .welcome__content
           .welcome__pic
-            img.welcome__img
-          .welcome__title
-          .welcome__txt
+            img.welcome__img(src="./assets/images/content/user.jpg")
+          h1.welcome__title Варнаев Александр
+          .welcome__txt личный сайт разработчика
           .welcome__socials
             ul.welcome__socials-list
-              li.welcome__socials-link: a.welcome__socials-vk
-              li.welcome__socials-link: a.welcome__socials-github
-              li.welcome__socials-link: a.welcome__socials-inst
-      .copyright Это сделал я! 
+              li.welcome__socials-link: a.welcome__socials-icon(href="https://vk.com/id6802343", target="_blank")
+                svg.welcome__socials-icon
+                  use(xlink:href="./assets/images/icons/sprite.svg#vk")
+              li.welcome__socials-link: a.welcome__socials-icon
+                svg.welcome__socials-icon
+                  use(xlink:href="./assets/images/icons/sprite.svg#github")
+              li.welcome__socials-link: a.welcome__socials-icon
+                svg.welcome__socials-icon
+                  use(xlink:href="./assets/images/icons/sprite.svg#in")
+        div.welcome__pages
+          div.welcome__block: a.welcome__page Мои работы
+          div.welcome__block: a.welcome__page Обо мне
+          div.welcome__block: a.welcome__page Блог
+      .copyright &copy; Варнаев Александр | Создано с любовью и кровью в LoftSchool 2018 &#9990; 89117564050 

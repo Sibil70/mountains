@@ -136,7 +136,7 @@ gulp.task(
   "default",
   gulp.series(
     "clean",
-    // "svg",
+    "svg",
     gulp.parallel("styles", "pug", "images", "fonts", "scripts"),
     gulp.parallel("watch", "server")
   )
@@ -147,7 +147,7 @@ gulp.task(
   "build",
   gulp.series(
     "clean",
-    // "svg",
+    "svg",
     gulp.parallel("styles", "pug", "images", "fonts", "scripts")
   )
 );
