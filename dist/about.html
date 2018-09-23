@@ -10,10 +10,231 @@
 	<body>
 		<div class="wrapper">
 			<div class="maincontent">
-				<h1>Страничка "Обо Мне"  </h1>
+				<section class="header">
+					<div class="header__links">
+						<div class="socials">
+							<ul class="socials__list">
+								<li class="socials__item"><a class="socials__link" href="#">
+										<svg class="socials__icon socials__icon--white">
+											<use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
+										</svg></a></li>
+								<li class="socials__item"><a class="socials__link" href="#">
+										<svg class="socials__icon socials__icon--white">
+											<use xlink:href="/assets/images/icons/sprite.svg#github"></use>
+										</svg></a></li>
+								<li class="socials__item"><a class="socials__link" href="#">
+										<svg class="socials__icon socials__icon--white">
+											<use xlink:href="/assets/images/icons/sprite.svg#in"></use>
+										</svg></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="header__menu">
+						<div class="hamburger-menu">
+							<div class="hamburger-menu__item"></div>
+							<div class="hamburger-menu__item"></div>
+							<div class="hamburger-menu__item"></div>
+						</div>
+					</div>
+					<div class="header__content-wraper">
+						<div class="user">
+							<div class="user__content">
+								<div class="user__pic"><img class="user__img" src="./assets/images/content/user.jpg"></div>
+								<h1 class="user__title">Варнаев Александр</h1>
+								<div class="user__txt">личный сайт разработчика</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__btn">
+						<div class="arrow">
+							<svg class="arrow__down">
+								<use xlink:href="/assets/images/icons/sprite.svg#arrow_down"></use>
+							</svg>
+						</div>
+					</div>
+				</section>
+				<section class="about">
+					<div class="about__col about__col_bg__white">
+						<div class="about__title">
+							<h2 class="title">Обо мне</h2>
+						</div>
+						<div class="about__content">
+							<div class="user-desc">
+								<div class="user-desc__pic"><img class="user-desc__pic-img" src="./assets/images/content/user-full.jpg" alt="user"></div>
+								<div class="user-desc__info">
+									<h3 class="user-desc__title">
+										<div class="subtitle">Кто я</div>
+									</h3>
+									<div class="user-desc__text">
+										<p>Я веб разработчик из Санкт-Петербурга. Мне 30 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
+										<p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="about__col about__col_bg__beige">
+						<div class="about__right-title">
+							<div class="subtitle">Чем я могу быть полезен</div>
+						</div>
+						<div class="about__small-desc">
+							<div class="p">Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</div>
+						</div>
+						<div class="about__info-container">
+							<ul class="skills">
+								<li class="skills__item">
+									<div class="skills-row">
+										<div class="skills-row__title">Frontend</div>
+										<ul class="skills-row__list">
+											<li class="skills-row__item">
+												<div class="skill">HTML 5</div>
+											</li>
+											<li class="skills-row__item">
+												<div class="skill">CSS 3</div>
+											</li>
+											<li class="skills-row__item">
+												<div class="skill">JavaScript &amp; JQuery</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+							<ul class="skills">
+								<li class="skills__item">
+									<div class="skills-row">
+										<div class="skills-row__title">Backend</div>
+										<ul class="skills-row__list">
+											<li class="skills-row__item">
+												<div class="skill">PHP</div>
+											</li>
+											<li class="skills-row__item">
+												<div class="skill">MySQL</div>
+											</li>
+											<li class="skills-row__item">
+												<div class="skill">Node.js &amp; npm</div>
+											</li>
+											<li class="skills-row__item">
+												<div class="skill">Mongo.db</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+							<ul class="skills">
+								<li class="skills__item">
+									<div class="skills-row">
+										<div class="skills-row__title">Workflow</div>
+										<ul class="skills-row__list">
+											<li class="skills-row__item">
+												<div class="skill">Git</div>
+											</li>
+											<li class="skills-row__item">
+												<div class="skill">Gulp</div>
+											</li>
+											<li class="skills-row__item">
+												<div class="skill">Bower</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="map">
+					<div class="map__yandex"><img class="map__pic" src="./assets/images/bg/map.png" alt="">
+						<div class="yamap"></div>
+					</div>
+					<div class="map__contacts">
+						<div class="user_data">
+							<div class="user_data__title">
+								<div class="subtitle">Контакты</div>
+							</div>
+							<div class="user_data__container">
+								<ul class="user_data__contacts-list">
+									<li class="user_data__contacts-item">
+										<div class="contacts">
+											<svg class="contacts__icon">
+												<use xlink:href="/assets/images/icons/sprite.svg#skype"></use>
+											</svg>
+											<div class="contacts__title">Sans1987</div>
+										</div>
+									</li>
+									<li class="user_data__contacts-item">
+										<div class="contacts">
+											<svg class="contacts__icon">
+												<use xlink:href="/assets/images/icons/sprite.svg#envelope"></use>
+											</svg>
+											<div class="contacts__title">alexandervarnaev@gmail.com</div>
+										</div>
+									</li>
+									<li class="user_data__contacts-item">
+										<div class="contacts">
+											<svg class="contacts__icon">
+												<use xlink:href="/assets/images/icons/sprite.svg#phone"></use>
+											</svg>
+											<div class="contacts__title">+7 911 756 40 50</div>
+										</div>
+									</li>
+									<li class="user_data__contacts-item">
+										<div class="contacts">
+											<svg class="contacts__icon">
+												<use xlink:href="/assets/images/icons/sprite.svg#map_marker"></use>
+											</svg>
+											<div class="contacts__title">г.СПб, Коломяжский пр., 15 к.2</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
 			<footer class="footer">
-				<h2>Copyright &copy;</h2>
+				<div class="footer__row">
+					<div class="footer__col">
+						<nav class="menu">
+							<ul class="menu__list">
+								<li class="menu__item"><a class="menu__link" href="#">Мои работы</a></li>
+								<li class="menu__item"><a class="menu__link" href="#">Обо мне</a></li>
+								<li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
+								<li class="menu__item"><a class="menu__link" href="#">Авторизация</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__col footer__col_justyfy_right">
+						<div class="footer__socials">
+							<div class="socials">
+								<ul class="socials__list">
+									<li class="socials__item"><a class="socials__link socials__link--rounded" href="#">
+											<svg class="socials__icon socials__icon--rounded">
+												<use xlink:href="/assets/images/icons/sprite.svg#vk"></use>
+											</svg></a></li>
+									<li class="socials__item"><a class="socials__link socials__link--rounded" href="#">
+											<svg class="socials__icon socials__icon--rounded">
+												<use xlink:href="/assets/images/icons/sprite.svg#github"></use>
+											</svg></a></li>
+									<li class="socials__item"><a class="socials__link socials__link--rounded" href="#">
+											<svg class="socials__icon socials__icon--rounded">
+												<use xlink:href="/assets/images/icons/sprite.svg#in"></use>
+											</svg></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__row">
+					<div class="footer__col">
+						<div class="copyright copyright_margin_left"> 
+							<p>Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
+						</div>
+					</div>
+					<div class="footer__col footer__col_justyfy_right">
+						<div class="copyright copyright_align_right">
+							<p>&copy; Варнаев Александр | создано с любовью в LoftSchool | 2018</p>
+						</div>
+					</div>
+				</div>
 			</footer>
 		</div>
 		<script src="bootloader.bundle.js"></script>

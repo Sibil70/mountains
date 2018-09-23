@@ -10,25 +10,26 @@ html(lang="en")
   .wrapper
     .container.welcomepage__container
       .auth Авторизоваться
-      .welcome
-        .welcome__content
-          .welcome__pic
-            img.welcome__img(src="./assets/images/content/user.jpg")
-          h1.welcome__title Варнаев Александр
-          .welcome__txt личный сайт разработчика
+      .user.welcome
+        .user__content
+          .user__pic
+            img.user__img(src="./assets/images/content/user.jpg")
+          h1.user__title Варнаев Александр
+          .user__txt личный сайт разработчика
+        .user__socials
           .socials
               ul.socials__list
-                  li.socials__link: a.socials__icon(href="https://vk.com/id6802343", target="_blank")
-                      svg.socials__icon
+                  li.socials__item: a.socials__icon(href="https://vk.com/id6802343", target="_blank")
+                      svg.socials__icon.socials__icon--green
                           use(xlink:href="./assets/images/icons/sprite.svg#vk")
-                  li.socials__link: a.socials__icon(href="https://github.com/Sibil70", target="_blank")
-                      svg.socials__icon
+                  li.socials__item: a.socials__icon(href="https://github.com/Sibil70", target="_blank")
+                      svg.socials__icon.socials__icon--green
                           use(xlink:href="./assets/images/icons/sprite.svg#github")
-                  li.socials__link: a.socials__icon(href="https://www.instagram.com/alexandervarnaev", target="_blank")
-                      svg.socials__icon
+                  li.socials__item: a.socials__icon(href="https://www.instagram.com/alexandervarnaev", target="_blank")
+                      svg.socials__icon.socials__icon--green
                           use(xlink:href="./assets/images/icons/sprite.svg#in")
         div.welcome__pages
-          div.welcome__block: a.welcome__page(href="./header.html") Мои работы
+          div.welcome__block: a.welcome__page(href="./about.html") Мои работы
           div.welcome__block: a.welcome__page Обо мне
           div.welcome__block: a.welcome__page Блог
-      .copyright &copy; Варнаев Александр | Создано с любовью и кровью в LoftSchool 2018 &#9990;89117564050 
+      .copyright.copyright_center &copy; Варнаев Александр | Создано с любовью и кровью в LoftSchool | 2018 | &#9990;89117564050 

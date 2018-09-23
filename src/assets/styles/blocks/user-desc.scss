@@ -1,0 +1,27 @@
+.user-des{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.user-desc__pic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.user-desc__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.user-desc__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 440px;
+    padding-bottom: 45px;
+}
