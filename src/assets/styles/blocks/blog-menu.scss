@@ -3,9 +3,9 @@
   margin-right: 98px;
 }
 
-blog-menu__list {
-  margin-right: 98px;
-}
+// .blog-menu__list {
+//   margin-right: 98px;
+// }
 
 .blog-menu__item {
   text-align: right;
@@ -29,6 +29,8 @@ blog-menu__list {
 }
 
 .blog-menu__link {
+  text-decoration: none;
+  color: $text-color;
   margin-right: 17px;
   font-size: 16px;
   font-weight: 400;
