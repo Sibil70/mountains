@@ -9,7 +9,7 @@ html(lang="en")
   body
   .wrapper
     .container.welcomepage__container
-      .auth Авторизоваться
+      button.authbtn Авторизоваться
       .user.welcome
         .user__content
           .user__pic
@@ -19,17 +19,39 @@ html(lang="en")
         .user__socials
           .socials
               ul.socials__list
-                  li.socials__item: a.socials__icon(href="https://vk.com/id6802343", target="_blank")
+                  li.socials__item: a.socials__link(href="https://vk.com/id6802343", target="_blank")
                       svg.socials__icon.socials__icon--green
                           use(xlink:href="./assets/images/icons/sprite.svg#vk")
-                  li.socials__item: a.socials__icon(href="https://github.com/Sibil70", target="_blank")
+                  li.socials__item: a.socials__link(href="https://github.com/Sibil70", target="_blank")
                       svg.socials__icon.socials__icon--green
                           use(xlink:href="./assets/images/icons/sprite.svg#github")
-                  li.socials__item: a.socials__icon(href="https://www.instagram.com/alexandervarnaev", target="_blank")
+                  li.socials__item: a.socials__link(href="https://www.instagram.com/alexandervarnaev", target="_blank")
                       svg.socials__icon.socials__icon--green
                           use(xlink:href="./assets/images/icons/sprite.svg#in")
         div.welcome__pages
           div.welcome__block: a.welcome__page(href="./about.html") Мои работы
           div.welcome__block: a.welcome__page Обо мне
           div.welcome__block: a.welcome__page Блог
+      .auth
+        .auth__title
+          .title Авторизуйтесь
+        .auth__form
+          .form
+            .form__login
+              .form__login-pic
+              input(type='text', required).form__login-input
+            .form__password
+              .form__password-pic
+              input(type='text', required).form__password-input
+            input(type='checkbox').form__check
+            span.form__check-text я человек
+            .form__question Вы точно не робот?
+              input(type='radio', name='not-robot' value='yes').form__radio
+              span.form__question-text Да
+              input(type='radio', name='not-robot' value='yes').form__radio
+              span.form__question-text Не уверен
+              
+
+
+        
       .copyright.copyright_center &copy; Варнаев Александр | Создано с любовью и кровью в LoftSchool | 2018 | &#9990;89117564050 

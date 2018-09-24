@@ -1,13 +1,25 @@
 .skills{
     margin-bottom: 30px;
 }
-.skills-row__title{
+.skills__row-title{
     font-size: 28px;
     margin-bottom: 20px;
 }
-.skills-row__list{
+.skills__row-list{
     display: flex;
 }
-.skills-row__item{
+.skills__row-item{
     margin-right: 30px;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+.skill{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $green;
 }

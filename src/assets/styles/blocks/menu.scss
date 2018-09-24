@@ -15,5 +15,9 @@
 }
 .menu__link{
     text-decoration: none;
-    color: white;
+    color: $white;
+    transition: 500ms;
+    &:hover{
+        color:$green;
+    }
 }

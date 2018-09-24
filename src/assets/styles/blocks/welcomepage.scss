@@ -6,24 +6,6 @@
     height: 100%;
     background: url(./assets/images/bg/hero.jpg)center center / cover  no-repeat;
 }
-.auth {
-    width: 180px;
-    height: 45px;
-    border: $white solid 2px;
-    border-radius: 3px;
-    line-height: 45px;
-    text-align: center;
-    color: $white;
-    position: relative;
-    top: 20px;
-    left: 85%;
-    &:hover {
-        transition: 1s;
-        background: $white;
-        color: $green;
-        cursor:pointer;
-    }
-}
 .welcome {
     width: 385px;
     height: 400px;
@@ -87,4 +69,9 @@ border-right: $light-grey 2px solid;
     white-space: nowrap;
     color: $white;
     text-decoration: none;
+}
+
+.js-toggle{
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
 }

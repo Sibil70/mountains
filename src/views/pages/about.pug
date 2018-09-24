@@ -61,12 +61,13 @@ block content
           each item in skills
             ul.skills
               li.skills__item
-                .skills-row
-                  .skills-row__title #{item[0]}
-                  ul.skills-row__list
+                .skills__row
+                  .skills__row-title #{item[0]}
+                  ul.skills__row-list
                     each skill in item[1]
-                      li.skills-row__item
-                        .skill #{skill}
+                      li.skills__row-item
+                        +circle(skill)
+                        span.skill #{skill}
   section.map
     .map__yandex
       img(src="./assets/images/bg/map.png", alt="").map__pic
