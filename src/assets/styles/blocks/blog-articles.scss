@@ -1,0 +1,15 @@
+
+
+
+.blog-articles__item {
+  border-bottom: 5px solid #00bfa5;
+  border-color: rgba($grey, 0.07);
+  margin-bottom: 64px;
+}
+
+.blog-articles__list :last-child {
+  border: none;
+  margin-bottom: 0;
+}
+
+

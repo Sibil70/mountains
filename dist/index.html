@@ -47,21 +47,32 @@
 				</div>
 				<div class="auth__form">
 					<div class="form">
-						<div class="form__login">
-							<div class="form__login-pic"></div>
+						<div class="form__input">
+							<div class="form__input-pic">
+								<svg class="form__login-icon">
+									<use xlink:href="./assets/images/icons/sprite.svg#login"></use>
+								</svg>
+							</div>
 							<input class="form__login-input" type="text" required="required"/>
 						</div>
-						<div class="form__password">
-							<div class="form__password-pic"></div>
+						<div class="form__input">
+							<div class="form__input-pic">
+								<svg class="form__login-icon">
+									<use xlink:href="./assets/images/icons/sprite.svg#password"></use>
+								</svg>
+							</div>
 							<input class="form__password-input" type="text" required="required"/>
 						</div>
-						<input class="form__check" type="checkbox"/><span class="form__check-text">я человек</span>
+						<div class="form__chkbox">
+							<input class="form__check" type="checkbox"/><span class="form__check-text">я человек</span>
+						</div>
 						<div class="form__question">Вы точно не робот?
 							<input class="form__radio" type="radio" name="not-robot" value="yes"/><span class="form__question-text">Да</span>
 							<input class="form__radio" type="radio" name="not-robot" value="yes"/><span class="form__question-text">Не уверен</span>
 						</div>
 					</div>
 				</div>
+				<div class="auth__btn"></div>
 			</div>
 			<div class="copyright copyright_center">&copy; Варнаев Александр | Создано с любовью и кровью в LoftSchool | 2018 | &#9990;89117564050 </div>
 		</div>
