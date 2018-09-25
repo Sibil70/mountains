@@ -34,11 +34,8 @@
     border-radius: 0 5px 5px 0;
     &:focus {
         color: $green;
-        outline-color: $green;
-        &>.form__input-pic{
-            background-color: red;
-            fill:$green;
-        }
+        outline-color: transparent;
+        border: 1px solid $green;
     }
 }
 .form__chkbox{
@@ -49,26 +46,30 @@
 }
 .form__chkbox-wrap{
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 .form__check{
-    margin-right: 7px;
+    display: none;
 }
 .form__check-fake{
-    // content: "";
-    // display: block;
-    // position: relative;
-    // width: rem(17px);
-    // height: rem(17px);
-    // background-color: #fff;
-    // margin-right: rem(10px);
-    // &:before{
-    //     content: "";
-    //     display: block;
-    //     width: rem(17px);
-    //     height: rem(13px);       
-    // }
+    width: 17px;
+    height: 17px;
+    padding: 3px;
+    background-color: #fff;
+    border: 1px solid rgba($light-grey, 0.7);
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px rgba($grey, 0.5);
+    margin-right: 10px;
+    fill: transparent;
 }
-
+.form__check{
+    &:checked ~.form__check-fake{
+        transition: 300ms;
+        background-color: $green;
+        fill:$white;
+    }
+}
 
 .form__question {
     display: flex;
@@ -119,6 +120,6 @@ margin-bottom: 10px;
 .form__radio {
     &:checked ~.form__radio-fake:before {
         background-color: $green;
-        transition: 0.3s;
+        transition: 0.5s;
     }
 }
