@@ -12,7 +12,7 @@ html(lang="en")
   .wrapper
     .container.welcomepage__container
       button.authbtn Авторизоваться
-      .user.welcome
+      .user.welcome.js-toggle
         .user__content
           .user__pic
             img.user__img(src="./assets/images/content/user.jpg")
@@ -20,33 +20,29 @@ html(lang="en")
           .user__txt личный сайт разработчика
         .user__socials
           .socials
-              ul.socials__list
-                  li.socials__item: a.socials__link(href="https://vk.com/id6802343", target="_blank")
-                      svg.socials__icon.socials__icon--green
-                          use(xlink:href="./assets/images/icons/sprite.svg#vk")
-                  li.socials__item: a.socials__link(href="https://github.com/Sibil70", target="_blank")
-                      svg.socials__icon.socials__icon--green
-                          use(xlink:href="./assets/images/icons/sprite.svg#github")
-                  li.socials__item: a.socials__link(href="https://www.instagram.com/alexandervarnaev", target="_blank")
-                      svg.socials__icon.socials__icon--green
-                          use(xlink:href="./assets/images/icons/sprite.svg#in")
-        div.welcome__pages
-          div.welcome__block: a.welcome__page(href="./myworks.html") Мои работы
-          div.welcome__block: a.welcome__page(href="./about.html") Обо мне
-          div.welcome__block: a.welcome__page(href="./blog.html") Блог
-      .auth
+            - var socials = [['https://vk.com/id6802343', "vk"],['https://github.com/Sibil70', "github"],['https://www.instagram.com/alexandervarnaev', "in"]]
+            ul.socials__list
+                each item in socials
+                  li.socials__item
+                    a(href=`${item[0]}`).socials__link
+                      +icon(item[1], 'socials__icon socials__icon--green')
+        .user__pages
+          .user__block: a.user__page(href="./myworks.html") Мои работы
+          .user__block: a.user__page(href="./about.html") Обо мне
+          .user__block: a.user__page(href="./blog.html") Блог
+      .auth.welcome
         .auth__title
-          .title Авторизуйтесь
+          .title.title--auth Авторизуйтесь
         .auth__form
           .form
             .form__input
               .form__input-pic
-                +icon('login', 'form__login-icon')
-              input(type='text', required).form__login-input
+                +icon('login', 'form__input-icon')
+              input(type='text', required).form__input-field
             .form__input
               .form__input-pic
-                +icon('password', 'form__login-icon')
-              input(type='text', required).form__password-input
+                +icon('password', 'form__input-icon')
+              input(type='text', required).form__input-field
             .form__chkbox
               input(type='checkbox').form__check
               span.form__check-text я человек
@@ -55,5 +51,7 @@ html(lang="en")
               span.form__question-text Да
               input(type='radio', name='not-robot' value='yes').form__radio
               span.form__question-text Не уверен
-        .auth__pages
+        .user__pages
+          .user__block: a.user__page(href="#") На главную
+          .user__block: a.user__page(href="#") Войти
       .copyright.copyright_center &copy; Варнаев Александр | Создано с любовью и кровью в LoftSchool | 2018 | &#9990;89117564050 

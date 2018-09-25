@@ -1,9 +1,10 @@
 .copyright{
     color: $white;
     position: relative;
-    top: 85%;
+
     width: 100%;
     &_center{
+        top: 85%;
         text-align: center;
     }
     &_margin_left{

@@ -3,6 +3,18 @@
     font-family: 'bernier';
     font-size: 48px;
     position: relative;
+    &--auth{
+        font-size: 32px;
+    }
+    &--clean{
+        &:before {
+            content: none;
+          }
+        
+          &:after {
+            content: none;
+          }
+    }
     &:before {
         content: "";
         display: inline-block;
@@ -45,4 +57,7 @@
         top: 50%;
         transform: translate(100%, -50%)
     }
+}
+.auth__title{
+    margin-bottom: 45px;
 }

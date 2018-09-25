@@ -9,8 +9,8 @@
 .welcome {
     width: 385px;
     height: 400px;
-    background-color: $light-grey;
-    opacity: 0.8;
+    background-color: $white;
+    opacity: 0.9;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -37,7 +37,7 @@
 .user__socials{
     margin-top: 25px;
 }
-.welcome__pages{
+.user__pages{
 display: flex;
 justify-content: space-between;
 width: 100%;
@@ -47,7 +47,7 @@ top: 5.5%;
 background-color: rgba($green, 0.6);
 border-radius: 0 0 5px 5px;
 }
-.welcome__block{
+.user__block{
 cursor: pointer;
 position: relative;
 width: 100%;
@@ -61,7 +61,7 @@ border-right: $light-grey 2px solid;
         background-color:  rgba($green, 0.9);
     }
 }
-.welcome__page{
+.user__page{
     position: absolute;
     top: 50%;
     left: 50%;

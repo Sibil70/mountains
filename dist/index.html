@@ -11,7 +11,7 @@
 	<div class="wrapper">
 		<div class="container welcomepage__container">
 			<button class="authbtn">Авторизоваться</button>
-			<div class="user welcome">
+			<div class="user welcome js-toggle">
 				<div class="user__content">
 					<div class="user__pic"><img class="user__img" src="./assets/images/content/user.jpg"/></div>
 					<h1 class="user__title">Варнаев Александр</h1>
@@ -20,48 +20,48 @@
 				<div class="user__socials">
 					<div class="socials">
 						<ul class="socials__list">
-							<li class="socials__item"><a class="socials__link" href="https://vk.com/id6802343" target="_blank">
+							<li class="socials__item"><a class="socials__link" href="https://vk.com/id6802343">
 									<svg class="socials__icon socials__icon--green">
 										<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
 									</svg></a></li>
-							<li class="socials__item"><a class="socials__link" href="https://github.com/Sibil70" target="_blank">
+							<li class="socials__item"><a class="socials__link" href="https://github.com/Sibil70">
 									<svg class="socials__icon socials__icon--green">
 										<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
 									</svg></a></li>
-							<li class="socials__item"><a class="socials__link" href="https://www.instagram.com/alexandervarnaev" target="_blank">
+							<li class="socials__item"><a class="socials__link" href="https://www.instagram.com/alexandervarnaev">
 									<svg class="socials__icon socials__icon--green">
 										<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
 									</svg></a></li>
 						</ul>
 					</div>
 				</div>
-				<div class="welcome__pages">
-					<div class="welcome__block"><a class="welcome__page" href="./myworks.html">Мои работы</a></div>
-					<div class="welcome__block"><a class="welcome__page" href="./about.html">Обо мне</a></div>
-					<div class="welcome__block"><a class="welcome__page" href="./blog.html">Блог</a></div>
+				<div class="user__pages">
+					<div class="user__block"><a class="user__page" href="./myworks.html">Мои работы</a></div>
+					<div class="user__block"><a class="user__page" href="./about.html">Обо мне</a></div>
+					<div class="user__block"><a class="user__page" href="./blog.html">Блог</a></div>
 				</div>
 			</div>
-			<div class="auth">
+			<div class="auth welcome">
 				<div class="auth__title">
-					<div class="title">Авторизуйтесь</div>
+					<div class="title title--auth">Авторизуйтесь</div>
 				</div>
 				<div class="auth__form">
 					<div class="form">
 						<div class="form__input">
 							<div class="form__input-pic">
-								<svg class="form__login-icon">
+								<svg class="form__input-icon">
 									<use xlink:href="./assets/images/icons/sprite.svg#login"></use>
 								</svg>
 							</div>
-							<input class="form__login-input" type="text" required="required"/>
+							<input class="form__input-field" type="text" required="required"/>
 						</div>
 						<div class="form__input">
 							<div class="form__input-pic">
-								<svg class="form__login-icon">
+								<svg class="form__input-icon">
 									<use xlink:href="./assets/images/icons/sprite.svg#password"></use>
 								</svg>
 							</div>
-							<input class="form__password-input" type="text" required="required"/>
+							<input class="form__input-field" type="text" required="required"/>
 						</div>
 						<div class="form__chkbox">
 							<input class="form__check" type="checkbox"/><span class="form__check-text">я человек</span>
@@ -72,7 +72,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="auth__pages"></div>
+				<div class="user__pages">
+					<div class="user__block"><a class="user__page" href="#">На главную</a></div>
+					<div class="user__block"><a class="user__page" href="#">Войти</a></div>
+				</div>
 			</div>
 			<div class="copyright copyright_center">&copy; Варнаев Александр | Создано с любовью и кровью в LoftSchool | 2018 | &#9990;89117564050 </div>
 		</div>
