@@ -5,14 +5,12 @@
 }
 .form__input{
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
 }
 .form__input-pic{
     background: $light-grey;
     border-radius: 5px 0 0 5px;
-}
-.form__input-pic{
     width: 45px;
     height: 45px;
     display: flex;
@@ -36,6 +34,91 @@
     border-radius: 0 5px 5px 0;
     &:focus {
         color: $green;
-        border: 2px solid $green;
+        outline-color: $green;
+        &>.form__input-pic{
+            background-color: red;
+            fill:$green;
+        }
+    }
+}
+.form__chkbox{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form__chkbox-wrap{
+    cursor: pointer;
+}
+.form__check{
+    margin-right: 7px;
+}
+.form__check-fake{
+    // content: "";
+    // display: block;
+    // position: relative;
+    // width: rem(17px);
+    // height: rem(17px);
+    // background-color: #fff;
+    // margin-right: rem(10px);
+    // &:before{
+    //     content: "";
+    //     display: block;
+    //     width: rem(17px);
+    //     height: rem(13px);       
+    // }
+}
+
+
+.form__question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form__question-text{
+flex: 1;
+margin-bottom: 10px;
+}
+.form__question-wrap{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+.form__question-btns{
+    display: flex;
+    align-items: center;
+}
+.form__radio {
+    display: none;
+}
+
+.form__radio-fake{
+    display: block;
+    width: 17px;
+    height:17px;
+    background-color: $white;
+    border: 1px solid rgba($grey, 0.5);
+    border-radius: 50%;
+    margin-right: 7px;
+    position: relative;
+    &:before{
+        content: "";
+        display: block;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.form__radio {
+    &:checked ~.form__radio-fake:before {
+        background-color: $green;
+        transition: 0.3s;
     }
 }

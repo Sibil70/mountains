@@ -44,13 +44,21 @@ html(lang="en")
                 +icon('password', 'form__input-icon')
               input(type='text', required).form__input-field
             .form__chkbox
-              input(type='checkbox').form__check
-              span.form__check-text я человек
-            .form__question Вы точно не робот?
-              input(type='radio', name='not-robot' value='yes').form__radio
-              span.form__question-text Да
-              input(type='radio', name='not-robot' value='yes').form__radio
-              span.form__question-text Не уверен
+              label.form__chkbox-wrap
+                input(type='checkbox').form__check
+                //- .form__check-fake
+                span.form__check-text я человек
+            .form__question 
+              span.form__question-text Вы точно не робот?
+              .form__question-btns
+                label.form__question-wrap(for="yes")
+                  input(type='radio', name='not-robot' value='yes' id='yes').form__radio
+                  .form__radio-fake
+                  span.form__radio-text Да
+                label.form__question-wrap(for="no")
+                  input(type='radio', name='not-robot' value='no' id='no').form__radio
+                  .form__radio-fake
+                  span.form__radio-text Не уверен
         .user__pages
           .user__block: a.user__page(href="#") На главную
           .user__block: a.user__page(href="#") Войти

@@ -64,11 +64,21 @@
 							<input class="form__input-field" type="text" required="required"/>
 						</div>
 						<div class="form__chkbox">
-							<input class="form__check" type="checkbox"/><span class="form__check-text">я человек</span>
+							<label class="form__chkbox-wrap">
+								<input class="form__check" type="checkbox"/><span class="form__check-text">я человек</span>
+							</label>
 						</div>
-						<div class="form__question">Вы точно не робот?
-							<input class="form__radio" type="radio" name="not-robot" value="yes"/><span class="form__question-text">Да</span>
-							<input class="form__radio" type="radio" name="not-robot" value="yes"/><span class="form__question-text">Не уверен</span>
+						<div class="form__question"> <span class="form__question-text">Вы точно не робот?</span>
+							<div class="form__question-btns">
+								<label class="form__question-wrap" for="yes">
+									<input class="form__radio" type="radio" name="not-robot" value="yes" id="yes"/>
+									<div class="form__radio-fake"></div><span class="form__radio-text">Да</span>
+								</label>
+								<label class="form__question-wrap" for="no">
+									<input class="form__radio" type="radio" name="not-robot" value="no" id="no"/>
+									<div class="form__radio-fake"></div><span class="form__radio-text">Не уверен</span>
+								</label>
+							</div>
 						</div>
 					</div>
 				</div>
