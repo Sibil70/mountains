@@ -61,3 +61,16 @@
 .auth__title{
     margin-bottom: 25px;
 }
+.work-title {
+    background: $white;
+    background: #faf8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 190px;
+    margin-bottom: 40px;
+    &--top{
+        margin-top: -150px;
+        padding-top: 190px;
+    }
+  }

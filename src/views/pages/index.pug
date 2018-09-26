@@ -12,7 +12,7 @@ html(lang="en")
   .wrapper
     .container.welcomepage__container
       button.authbtn Авторизоваться
-      .user.welcome.js-toggle
+      .welcome.user
         .user__content
           .user__pic
             img.user__img(src="./assets/images/content/user.jpg")
@@ -27,10 +27,10 @@ html(lang="en")
                     a(href=`${item[0]}`).socials__link
                       +icon(item[1], 'socials__icon socials__icon--green')
         .user__pages
-          .user__block: a.user__page(href="./myworks.html") Мои работы
+          .user__block: a.user__page(href="./works.html") Мои работы
           .user__block: a.user__page(href="./about.html") Обо мне
           .user__block: a.user__page(href="./blog.html") Блог
-      .auth.welcome
+      .welcome.auth.js-toggle
         .auth__title
           .title.title--auth Авторизуйтесь
         .auth__form

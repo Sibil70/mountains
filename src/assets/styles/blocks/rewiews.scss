@@ -1,0 +1,85 @@
+.reviews {
+  background: url('./assets/images/bg/bg.png') 50%/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+}
+
+.reviews__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 68px;
+}
+
+.reviews__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.reviews__item {
+  max-width: 365px;
+  width: 365px;
+  margin-bottom: 37px;
+
+  &:nth-child(odd) {
+    margin-right: 37px;
+  }
+}
+
+.rewiews__quot-img {
+  max-width: 33px;
+  max-height: 29px;
+  margin-bottom: 29px;
+}
+
+.reviews__text {
+  margin-bottom: 27px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #455a64;
+
+}
+
+.reviewer_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.reviewer__avatar {
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 77px;
+  max-height: 77px;
+}
+
+.reviewer__avatar {
+  margin-right: 22px;
+}
+
+.reviewer__avatar-img{
+  width: 100%;
+  height: 100%;
+}
+
+.reviewer__name, .rewiewer__position {
+  color: $green;
+  font-size: 16px;
+}
+
+.reviewer__name {
+  font-weight: 700;
+}
+
+.rewiewer__position {
+  font-weight: 400;
+}

@@ -1,0 +1,70 @@
+.feedback-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: calc(140px + 30px);
+
+}
+.feedback-form {
+  width: 380px;
+  height: 437px;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.subtitle__feedback {
+  margin-top: 39px;
+  margin-bottom: 30px;
+  max-width: 380px;
+}
+
+.input__text {
+  height: 45px;
+  width: 340px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding-left: 20px;
+  border: 1px solid white;
+  &:focus{
+    outline: transparent;
+    border: 1px solid $green;
+  }
+}
+
+.input__message {
+  height: 140px;
+  border: 1px solid white;
+  display: flex;
+  align-items: flex-start;
+}
+
+.buttons__row {
+  width: 100%;
+  display: flex;
+}
+
+.button__send, .button__clear {
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  background: rgba($green, 0.6);
+  &:hover{
+    background: $green;
+  }
+  color: white;
+  border-radius: 0;
+}
+
+.button {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-right: $light-grey 2px solid;
+  &:last-child {
+      border: none;
+  }
+}
