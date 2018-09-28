@@ -15,11 +15,19 @@
     top: 20px;
     right: 50px;
 }
-.header__content-wraper{
+.header__content{
     position: absolute;
     top: 150px;
     left: 50%;
     transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.header__pic{
+    border-radius: 100%;
+    overflow: hidden;
 }
 .header__btn{
     width: 30px;

@@ -1,0 +1,23 @@
+section.slider.slider-js
+    .slider__title
+        h1.title Мои работы
+    .slider__description
+        .description__container
+          .description__title
+            h3.subtitle Сайт школы онлайн образования
+          .description__tech HTML, CSS, JAVASCRIPT
+          a(href='#').description__button.button
+            +icon('link', 'description__button-img')
+            span.description__button-text Посмотреть сайт
+    .slider__preview
+        .slider__prev-slide
+          +image('content/slider1.png', 'slider1', 'prev-slide__img')
+        .slider__control-row
+          button.slider__down-slide
+            +image('content/slider2.png', 'slider2', 'control-slide__img')
+            .slider__prev-arrow-down
+              +icon('portf_arrow_down', 'description__button-img')
+          button.slider__up-slide
+            +image('content/slider3.png', 'slider3', 'control-slide__img')
+            .slider__prev-arrow-down
+              +icon('portf_arrow_up', 'description__button-img')

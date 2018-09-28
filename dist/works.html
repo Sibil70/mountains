@@ -9,57 +9,51 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<div class="maincontent">
-				<section class="header">
-					<div class="header__links"></div>
-					<div class="socials">
-						<ul class="socials__list">
-							<li class="socials__item"><a class="socials__link" href="https://vk.com/id6802343">
-									<svg class="socials__icon socials__icon--white">
-										<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
-									</svg></a></li>
-							<li class="socials__item"><a class="socials__link" href="https://github.com/Sibil70">
-									<svg class="socials__icon socials__icon--white">
-										<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
-									</svg></a></li>
-							<li class="socials__item"><a class="socials__link" href="https://www.instagram.com/alexandervarnaev">
-									<svg class="socials__icon socials__icon--white">
-										<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
-									</svg></a></li>
-						</ul>
-					</div>
-					<div class="header__menu">
-						<div class="hamburger-menu">
-							<div class="hamburger-menu__item"></div>
-							<div class="hamburger-menu__item"></div>
-							<div class="hamburger-menu__item"></div>
-						</div>
-					</div>
-					<div class="header__content-wraper">
-						<div class="user">
-							<div class="user__content">
-								<div class="user__pic"><img class="user__img" src="./assets/images/content/user.jpg"></div>
-								<h1 class="user__title">Варнаев Александр</h1>
-								<div class="user__txt">Личный сайт веб-разработчика</div>
-							</div>
-						</div>
-					</div>
-					<div class="header__btn">
-						<div class="arrow">
-							<svg class="arrow__down">
-								<use xlink:href="./assets/images/icons/sprite.svg#arrow_down"></use>
-							</svg>
-						</div>
-					</div>
-				</section>
-				<div class="work-title work-title--top">
-					<h1 class="title">Мои работы</h1>
+			<header class="header">
+				<div class="header__links">
+										<ul class="socials">
+											<li class="socials__item"><a class="socials__linkundefined" href="https://vk.com/id6802343">
+													<svg class="socials__icon socials__icon--header">
+														<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+													</svg></a></li>
+											<li class="socials__item"><a class="socials__linkundefined" href="https://github.com/Sibil70">
+													<svg class="socials__icon socials__icon--header">
+														<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+													</svg></a></li>
+											<li class="socials__item"><a class="socials__linkundefined" href="https://www.instagram.com/alexandervarnaev">
+													<svg class="socials__icon socials__icon--header">
+														<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
+													</svg></a></li>
+										</ul>
 				</div>
+				<div class="header__menu">
+					<button class="hamburger-menu">
+						<div class="hamburger-menu__item"></div>
+						<div class="hamburger-menu__item"></div>
+						<div class="hamburger-menu__item"></div>
+					</button>
+				</div>
+				<div class="header__content">
+					<div class="header__pic"><img class="header__pic-img" src="./assets/images/content/user.jpg"></div>
+					<h1 class="header__title">Варнаев Александр</h1><span class="header__txt">личный сайт разработчика</span>
+				</div>
+				<div class="header__btn">
+					<button class="arrow">
+						<svg class="arrow__down">
+							<use xlink:href="./assets/images/icons/sprite.svg#arrow_down"></use>
+						</svg>
+					</button>
+				</div>
+			</header>
+			<div class="maincontent">
 				<section class="slider slider-js">
+					<div class="slider__title">
+						<h1 class="title">Мои работы</h1>
+					</div>
 					<div class="slider__description">
 						<div class="description__container">
 							<div class="description__title">
-								<div class="subtitle">Сайт школы онлайн образования</div>
+								<h3 class="subtitle">Сайт школы онлайн образования</h3>
 							</div>
 							<div class="description__tech">HTML, CSS, JAVASCRIPT</div><a class="description__button button" href="#">
 								<svg class="description__button-img">
@@ -135,11 +129,11 @@
 						</form>
 					</div>
 					<div class="bottom__arrow">
-						<div class="arrow">
+						<button class="arrow">
 							<svg class="arrow__down">
 								<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_up"></use>
 							</svg>
-						</div>
+						</button>
 					</div>
 				</section>
 			</div>
@@ -157,22 +151,20 @@
 					</div>
 					<div class="footer__col footer__col_justyfy_right">
 						<div class="footer__socials">
-							<div class="socials">
-								<ul class="socials__list">
-									<li class="socials__item"><a class="socials__link socials__link--rounded" href="https://vk.com/id6802343">
-											<svg class="socials__icon socials__icon--rounded">
-												<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
-											</svg></a></li>
-									<li class="socials__item"><a class="socials__link socials__link--rounded" href="https://github.com/Sibil70">
-											<svg class="socials__icon socials__icon--rounded">
-												<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
-											</svg></a></li>
-									<li class="socials__item"><a class="socials__link socials__link--rounded" href="https://www.instagram.com/alexandervarnaev">
-											<svg class="socials__icon socials__icon--rounded">
-												<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
-											</svg></a></li>
-								</ul>
-							</div>
+														<ul class="socials">
+															<li class="socials__item"><a class="socials__link--rounded" href="https://vk.com/id6802343">
+																	<svg class="socials__icon socials__icon--footer">
+																		<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+																	</svg></a></li>
+															<li class="socials__item"><a class="socials__link--rounded" href="https://github.com/Sibil70">
+																	<svg class="socials__icon socials__icon--footer">
+																		<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+																	</svg></a></li>
+															<li class="socials__item"><a class="socials__link--rounded" href="https://www.instagram.com/alexandervarnaev">
+																	<svg class="socials__icon socials__icon--footer">
+																		<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
+																	</svg></a></li>
+														</ul>
 						</div>
 					</div>
 				</div>

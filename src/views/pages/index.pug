@@ -10,56 +10,5 @@ html(lang="en")
     link(rel="stylesheet", href="main.min.css")
   body
   .wrapper
-    .container.welcomepage__container
-      button.authbtn Авторизоваться
-      .welcome.user
-        .user__content
-          .user__pic
-            img.user__img(src="./assets/images/content/user.jpg")
-          h1.user__title Варнаев Александр
-          .user__txt личный сайт разработчика
-        .user__socials
-          .socials
-            - var socials = [['https://vk.com/id6802343', "vk"],['https://github.com/Sibil70', "github"],['https://www.instagram.com/alexandervarnaev', "in"]]
-            ul.socials__list
-                each item in socials
-                  li.socials__item
-                    a(href=`${item[0]}`).socials__link
-                      +icon(item[1], 'socials__icon socials__icon--green')
-        .user__pages
-          .user__block: a.user__page(href="./works.html") Мои работы
-          .user__block: a.user__page(href="./about.html") Обо мне
-          .user__block: a.user__page(href="./blog.html") Блог
-      .welcome.auth.js-toggle
-        .auth__title
-          .title.title--auth Авторизуйтесь
-        .auth__form
-          .form
-            .form__input
-              .form__input-pic
-                +icon('login', 'form__input-icon')
-              input(type='text', required).form__input-field
-            .form__input
-              .form__input-pic
-                +icon('password', 'form__input-icon')
-              input(type='text', required).form__input-field
-            .form__chkbox
-              label.form__chkbox-wrap
-                input(type='checkbox').form__check
-                +icon('check', 'form__check-fake')
-                span.form__check-text я человек
-            .form__question 
-              span.form__question-text Вы точно не робот?
-              .form__question-btns
-                label.form__question-wrap(for="yes")
-                  input(type='radio', name='not-robot' value='yes' id='yes').form__radio
-                  .form__radio-fake
-                  span.form__radio-text Да
-                label.form__question-wrap(for="no")
-                  input(type='radio', name='not-robot' value='no' id='no').form__radio
-                  .form__radio-fake
-                  span.form__radio-text Не уверен
-        .user__pages
-          .user__block: a.user__page(href="#") На главную
-          .user__block: a.user__page(href="#") Войти
-      .copyright.copyright_center &copy; Варнаев Александр | Создано с любовью и кровью в LoftSchool | 2018 | &#9990;89117564050 
+    .container.welcome-container
+      include ../components/card/card

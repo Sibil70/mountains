@@ -1,0 +1,25 @@
+.form
+            .form__input
+              .form__input-pic
+                +icon('login', 'form__input-icon')
+              input(type='text', required).form__input-field
+            .form__input
+              .form__input-pic
+                +icon('password', 'form__input-icon')
+              input(type='text', required).form__input-field
+            .form__chkbox
+              label.form__chkbox-wrap
+                input(type='checkbox').form__check
+                +icon('check', 'form__check-fake')
+                span.form__check-text я человек
+            .form__question 
+              span.form__question-text Вы точно не робот?
+              .form__question-btns
+                label.form__question-wrap(for="yes")
+                  input(type='radio', name='not-robot' value='yes' id='yes').form__radio
+                  .form__radio-fake
+                  span.form__radio-text Да
+                label.form__question-wrap(for="no")
+                  input(type='radio', name='not-robot' value='no' id='no').form__radio
+                  .form__radio-fake
+                  span.form__radio-text Не уверен

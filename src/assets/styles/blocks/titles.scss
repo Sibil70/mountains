@@ -19,7 +19,9 @@
         content: "";
         display: inline-block;
         width: 20px;
-        border: 3px solid rgba($grey, 0.3);
+        border: 3px solid $grey;
+        background-color: $grey;
+                opacity: 0.4;
         position: absolute;
         top: 50%;
         transform: translate(-200%, -50%)
@@ -28,7 +30,9 @@
         content: "";
         display: inline-block;
         width: 20px;
-        border: 3px solid rgba($grey, 0.3);
+        border: 3px solid $grey;
+        background-color: $grey;
+        opacity: 0.4;
         position: absolute;
         top: 50%;
         transform: translate(100%, -50%)
@@ -43,7 +47,9 @@
         content: "";
         display: inline-block;
         width: 20px;
-        border: 3px solid rgba($grey, 0.3);
+        border: 3px solid $grey;
+        background-color: $grey;
+        opacity: 0.4;
         position: absolute;
         top: 50%;
         transform: translate(-200%, -50%)
@@ -52,14 +58,16 @@
         content: "";
         display: inline-block;
         width: 20px;
-        border: 3px solid rgba($grey, 0.3);
+        border: 3px solid $grey;
+        background-color: $grey;
+        opacity: 0.4;
         position: absolute;
         top: 50%;
         transform: translate(100%, -50%)
     }
 }
 .auth__title{
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 }
 .work-title {
     background: $white;

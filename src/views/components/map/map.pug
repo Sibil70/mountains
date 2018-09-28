@@ -1,0 +1,15 @@
+section.map
+        .map__yandex
+          img(src="./assets/images/bg/map.png", alt="").map__pic
+          .yamap
+        .map__contacts
+          .user_data
+            .user_data__title
+              .subtitle Контакты
+            .user_data__container
+              ul.user_data__contacts-list
+                each item in [['skype','Sans1987'],['envelope','alexandervarnaev@gmail.com'], ['phone','+7 911 756 40 50'], ['map_marker','г.СПб, Коломяжский пр., 15 к.2']]
+                  li.user_data__contacts-item
+                    .contacts
+                      +icon(item[0],'contacts__icon')
+                      .contacts__title #{item[1]}

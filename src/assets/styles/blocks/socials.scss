@@ -1,13 +1,11 @@
 .socials {
     display: inline-block;
+    display: flex;
+    justify-content: space-between;
     &--about{
         position: absolute;
         top: 20%; left: 30%;
     }
-}
-.socials__list{
-    display: flex;
-    justify-content: space-between;
 }
 .socials__item {
     margin-right: 30px;
@@ -16,8 +14,8 @@
     }
 }
 .socials__link--rounded{
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     display: inline-block;
     border: 1px solid grey;
     border-radius: 100%;
@@ -33,24 +31,24 @@ width: 25px;
 height: 25px;
 cursor: pointer;
 transition: 300ms;
-&--green{
-    fill: rgba($green, 0.5);
-    &:hover{
-        transition: 500ms;
-        fill:rgba($green, 1)
-}
-}
-&--white{
-    fill: $white;
-    opacity: 0.5;
-    &:hover {
-        opacity: 1;
-    }
-}
-&--rounded{
-    width: 15px;
-    height: 15px;
-    fill:grey;
-    transform: translate(30%, 30%);
-}
+        &--card{
+            fill: rgba($green, 0.5);
+            &:hover{
+                transition: 500ms;
+                fill:rgba($green, 1)
+                    }
+        }
+        &--header{
+            fill: $white;
+            opacity: 0.5;
+         &:hover {
+             opacity: 1;
+            }
+        }
+        &--footer{
+            width: 20px;
+            height: 20px;
+            fill:grey;
+            transform: translate(20%, 15%);
+        }
 }
