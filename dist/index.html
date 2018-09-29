@@ -9,39 +9,37 @@
 	</head>
 	<body></body>
 	<div class="wrapper">
-		<div class="container welcomepage__container">
+		<div class="container welcome-container">
 			<button class="authbtn">Авторизоваться</button>
-			<div class="user welcome js-toggle">
+			<div class="user user--front">
 				<div class="user__content">
 					<div class="user__pic"><img class="user__img" src="./assets/images/content/user.jpg"/></div>
 					<h1 class="user__title">Варнаев Александр</h1>
 					<div class="user__txt">личный сайт разработчика</div>
-				</div>
-				<div class="user__socials">
-					<div class="socials">
-						<ul class="socials__list">
-							<li class="socials__item"><a class="socials__link" href="https://vk.com/id6802343">
-									<svg class="socials__icon socials__icon--green">
-										<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
-									</svg></a></li>
-							<li class="socials__item"><a class="socials__link" href="https://github.com/Sibil70">
-									<svg class="socials__icon socials__icon--green">
-										<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
-									</svg></a></li>
-							<li class="socials__item"><a class="socials__link" href="https://www.instagram.com/alexandervarnaev">
-									<svg class="socials__icon socials__icon--green">
-										<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
-									</svg></a></li>
-						</ul>
+					<div class="user__socials">
+												<ul class="socials">
+													<li class="socials__item"><a class="socials__linkundefined" href="https://vk.com/id6802343">
+															<svg class="socials__icon socials__icon--card">
+																<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+															</svg></a></li>
+													<li class="socials__item"><a class="socials__linkundefined" href="https://github.com/Sibil70">
+															<svg class="socials__icon socials__icon--card">
+																<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+															</svg></a></li>
+													<li class="socials__item"><a class="socials__linkundefined" href="https://www.instagram.com/alexandervarnaev">
+															<svg class="socials__icon socials__icon--card">
+																<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
+															</svg></a></li>
+												</ul>
 					</div>
 				</div>
 				<div class="user__pages">
-					<div class="user__block"><a class="user__page" href="./myworks.html">Мои работы</a></div>
+					<div class="user__block"><a class="user__page" href="./works.html">Мои работы</a></div>
 					<div class="user__block"><a class="user__page" href="./about.html">Обо мне</a></div>
 					<div class="user__block"><a class="user__page" href="./blog.html">Блог</a></div>
 				</div>
 			</div>
-			<div class="auth welcome">
+			<div class="user user--back js-toggle">
 				<div class="auth__title">
 					<div class="title title--auth">Авторизуйтесь</div>
 				</div>
@@ -86,8 +84,12 @@
 					</div>
 				</div>
 				<div class="user__pages">
-					<div class="user__block"><a class="user__page" href="#">На главную</a></div>
-					<div class="user__block"><a class="user__page" href="#">Войти</a></div>
+					<div class="user__block">
+						<button class="user__page">На главную</button>
+					</div>
+					<div class="user__block">
+						<button class="user__page" type="submit">Войти</button>
+					</div>
 				</div>
 			</div>
 			<div class="copyright copyright_center">&copy; Варнаев Александр | Создано с любовью и кровью в LoftSchool | 2018 | &#9990;89117564050 </div>

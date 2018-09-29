@@ -11,6 +11,8 @@ const reload = browserSync.reload;
 const $webpack = require("webpack-stream");
 const webpack = require("webpack");
 const del = require("del");
+ 
+
 
 // стили
 gulp.task("styles", () => {
