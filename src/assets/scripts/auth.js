@@ -1,1 +1,4 @@
-console.log("auth module loaded");
+import "./modules/authorizationBtn";
+
+
+console.log("авторизация");
