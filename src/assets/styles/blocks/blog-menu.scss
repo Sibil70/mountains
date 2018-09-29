@@ -1,3 +1,8 @@
+.blog {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
 .blog-menu {
   margin-top: 5px;
   margin-right: 98px;
@@ -9,18 +14,15 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
-
   margin-bottom: 24px;
+    &--active {
+      border-right: 3px solid #00bfa5;
+    }
 
-  &--active {
-    border-right: 3px solid #00bfa5;
-  }
-
-  &--active .blog-menu__link {
-   color: #00bfa5;
-   font-weight: bold;
-  }
+    &--active .blog-menu__link {
+    color: #00bfa5;
+    font-weight: bold;
+    }
 }
 
 .blog-menu__btn {
