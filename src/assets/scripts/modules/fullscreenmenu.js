@@ -4,8 +4,6 @@ const fullScreenMenu = document.querySelector ('.fullscreenmenu');
 const closeMenu = document.querySelector (".fullscreenmenu__btn");
 const closeMenu2 = document.querySelectorAll (".fullscreenmenu__link");
 
-console.log (hamburger, fullScreenMenu, closeMenu, closeMenu2)
-
 hamburger.addEventListener ('click', function (){
     fullScreenMenu.style.display = "flex";
     document.body.classList.add('blocked-scroll');
@@ -18,7 +16,7 @@ closeMenu.addEventListener ('click', function (){
 
 
 closeMenu2.forEach(function(item) {
-    item.addEventListener('click', function(e) {
+    item.addEventListener('click', function() {
         fullScreenMenu.style.display = "none";
         document.body.classList.remove('blocked-scroll');
     });

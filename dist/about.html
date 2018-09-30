@@ -73,93 +73,7 @@
 							<div class="p">Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</div>
 						</div>
 						<div class="about__info-container">
-							<ul class="skills">
-								<li class="skills__item">
-									<div class="skills__row">
-										<div class="skills__row-title">Frontend</div>
-										<ul class="skills__row-list">
-											<li class="skills__row-item">
-												<svg class="circle" viewbox="0 0 110 110">
-													<circle class="circle__grey circle__grey--HTML 5" r="45" cx="50%" cy="50%"></circle>
-													<circle class="circle__green circle__green--HTML 5" r="45" cx="50%" cy="50%"></circle>
-												</svg><span class="skill">HTML 5</span>
-											</li>
-											<li class="skills__row-item">
-												<svg class="circle" viewbox="0 0 110 110">
-													<circle class="circle__grey circle__grey--CSS 3" r="45" cx="50%" cy="50%"></circle>
-													<circle class="circle__green circle__green--CSS 3" r="45" cx="50%" cy="50%"></circle>
-												</svg><span class="skill">CSS 3</span>
-											</li>
-											<li class="skills__row-item">
-												<svg class="circle" viewbox="0 0 110 110">
-													<circle class="circle__grey circle__grey--JavaScript &amp; JQuery" r="45" cx="50%" cy="50%"></circle>
-													<circle class="circle__green circle__green--JavaScript &amp; JQuery" r="45" cx="50%" cy="50%"></circle>
-												</svg><span class="skill">JavaScript &amp; JQuery</span>
-											</li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-							<ul class="skills">
-								<li class="skills__item">
-									<div class="skills__row">
-										<div class="skills__row-title">Backend</div>
-										<ul class="skills__row-list">
-											<li class="skills__row-item">
-												<svg class="circle" viewbox="0 0 110 110">
-													<circle class="circle__grey circle__grey--PHP" r="45" cx="50%" cy="50%"></circle>
-													<circle class="circle__green circle__green--PHP" r="45" cx="50%" cy="50%"></circle>
-												</svg><span class="skill">PHP</span>
-											</li>
-											<li class="skills__row-item">
-												<svg class="circle" viewbox="0 0 110 110">
-													<circle class="circle__grey circle__grey--MySQL" r="45" cx="50%" cy="50%"></circle>
-													<circle class="circle__green circle__green--MySQL" r="45" cx="50%" cy="50%"></circle>
-												</svg><span class="skill">MySQL</span>
-											</li>
-											<li class="skills__row-item">
-												<svg class="circle" viewbox="0 0 110 110">
-													<circle class="circle__grey circle__grey--Node.js &amp; npm" r="45" cx="50%" cy="50%"></circle>
-													<circle class="circle__green circle__green--Node.js &amp; npm" r="45" cx="50%" cy="50%"></circle>
-												</svg><span class="skill">Node.js &amp; npm</span>
-											</li>
-											<li class="skills__row-item">
-												<svg class="circle" viewbox="0 0 110 110">
-													<circle class="circle__grey circle__grey--Mongo.db" r="45" cx="50%" cy="50%"></circle>
-													<circle class="circle__green circle__green--Mongo.db" r="45" cx="50%" cy="50%"></circle>
-												</svg><span class="skill">Mongo.db</span>
-											</li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-							<ul class="skills">
-								<li class="skills__item">
-									<div class="skills__row">
-										<div class="skills__row-title">Workflow</div>
-										<ul class="skills__row-list">
-											<li class="skills__row-item">
-												<svg class="circle" viewbox="0 0 110 110">
-													<circle class="circle__grey circle__grey--Git" r="45" cx="50%" cy="50%"></circle>
-													<circle class="circle__green circle__green--Git" r="45" cx="50%" cy="50%"></circle>
-												</svg><span class="skill">Git</span>
-											</li>
-											<li class="skills__row-item">
-												<svg class="circle" viewbox="0 0 110 110">
-													<circle class="circle__grey circle__grey--Gulp" r="45" cx="50%" cy="50%"></circle>
-													<circle class="circle__green circle__green--Gulp" r="45" cx="50%" cy="50%"></circle>
-												</svg><span class="skill">Gulp</span>
-											</li>
-											<li class="skills__row-item">
-												<svg class="circle" viewbox="0 0 110 110">
-													<circle class="circle__grey circle__grey--Bower" r="45" cx="50%" cy="50%"></circle>
-													<circle class="circle__green circle__green--Bower" r="45" cx="50%" cy="50%"></circle>
-												</svg><span class="skill">Bower</span>
-											</li>
-										</ul>
-									</div>
-								</li>
-							</ul>
+							<div id="skills-component"></div>
 						</div>
 					</div>
 				</section>
@@ -216,7 +130,7 @@
 								<li class="menu__item"><a class="menu__link" href="works.html">Мои работы</a></li>
 								<li class="menu__item"><a class="menu__link" href="about.html">Обо мне</a></li>
 								<li class="menu__item"><a class="menu__link" href="blog.html">Блог</a></li>
-								<li class="menu__item"><a class="menu__link" href="index.html">Авторизация</a></li>
+								<li class="menu__item"><a class="menu__link" href="index.html?auth">Авторизация</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -262,9 +176,35 @@
 					<li class="fullscreenmenu__item"><a class="fullscreenmenu__link" href="works.html">Мои работы</a></li>
 					<li class="fullscreenmenu__item"><a class="fullscreenmenu__link" href="about.html">Обо мне</a></li>
 					<li class="fullscreenmenu__item"><a class="fullscreenmenu__link" href="blog.html">Блог</a></li>
-					<li class="fullscreenmenu__item"><a class="fullscreenmenu__link" href="index.html">Авторизация</a></li>
+					<li class="fullscreenmenu__item"><a class="fullscreenmenu__link" href="index.html?auth">Авторизация</a></li>
 				</ul>
 			</div>
+			<script type="text/x-template" id="skills-list">
+				<ul class="skills">
+					<li class="skills__item" v-for="skillsRow in skills" :key="skillsRow.skillsGroup">
+						<skillsRow :skills="skillsRow"></skillsRow>
+					</li>
+				</ul>
+			</script>
+			<script type="text/x-template" id="skills-item">
+				<div class="skills__row">
+					<div class="skills__row-title">{{skills.skillsGroup}}</div>
+					<ul class="skills__row-list">
+						<li class="skills__row-item">
+							<skill v-for="(skillPercentage, skillTitle) in skills.skills" :title="skillTitle" :percentage="skillPercentage"></skill>
+						</li>
+					</ul>
+				</div>
+			</script>
+			<script type="text/x-template" id="skill">
+				<div class="skill">
+					<svg class="skill__circle" viewbox="0 0 110 110">
+						<circle class="circle__grey" r="45" cx="50%" cy="50%"></circle>
+						<circle class="circle__green" r="45" cx="50%" cy="50%" ref="circle"></circle>
+					</svg>
+					<div class="skill__title">{{title}}</div>
+				</div>
+			</script>
 		</div>
 		<script src="bootloader.bundle.js"></script>
 		<script src="vendor.bundle.js"></script>
