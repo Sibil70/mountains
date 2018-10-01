@@ -131,6 +131,7 @@ gulp.task("watch", () => {
   gulp.watch(`${config.SRC_DIR}/scripts/**/*.js`, gulp.series("scripts"));
   gulp.watch(`${config.SRC_DIR}/fonts/*`, gulp.series("fonts"));
   gulp.watch(`${config.VIEWS_DIR}/**/*.pug`, gulp.series("pug"));
+  gulp.watch(`${config.VIEWS_DIR}/**/*.scss`, gulp.series("styles"));
 });
 
 // GULP:DEV

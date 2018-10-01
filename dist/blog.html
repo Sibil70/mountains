@@ -162,7 +162,7 @@
 					<div class="skills__row-title">{{skills.skillsGroup}}</div>
 					<ul class="skills__row-list">
 						<li class="skills__row-item">
-							<skill v-for="(skillPercentage, skillTitle) in skills.skills" :title="skillTitle" :percentage="skillPercentage"></skill>
+							<skill v-for="(skillPercentage, skillTitle) in skills.skills" :key="skills.skillsElements" :title="skillTitle" :percentage="skillPercentage"></skill>
 						</li>
 					</ul>
 				</div>
@@ -174,6 +174,49 @@
 						<circle class="circle__green" r="45" cx="50%" cy="50%" ref="circle"></circle>
 					</svg>
 					<div class="skill__title">{{title}}</div>
+				</div>
+			</script>
+			<script type="text/x-template" id="slider-root">
+				<div class="slider__display">
+					<info :work="currentWork"></info>
+					<display :work="currentWork"></display>
+					<btns @slide="handleSlide" :index="currentIndex" :works="works"></btns>
+				</div>
+			</script>
+			<script type="text/x-template" id="slider-info">
+				<div class="slider__description">
+					<div class="description__container">
+						<div class="description__title">
+							<h3 class="subtitle">{{work.title}}</h3>
+						</div>
+						<div class="description__tech">{{work.skills}}</div><a class="description__button button" :href="work.link" target="_blank">
+							<svg class="description__button-img">
+								<use xlink:href="./assets/images/icons/sprite.svg#link"></use>
+							</svg><span class="description__button-text">Посмотреть сайт</span></a>
+					</div>
+				</div>
+			</script>
+			<script type="text/x-template" id="slider-display">
+				<div class="slider__preview">
+					<div class="slider__prev-slide"><img class="prev-slide__img" :src="work.photo" alt="slider1"></div>
+				</div>
+			</script>
+			<script type="text/x-template" id="slider-btns">
+				<div class="slider__control-row">
+					<button class="slider__down-slide" @click="slide('prev')"><img class="control-slide__img" :src="prevButtonWorks[Index].photo" alt="slider2">
+						<div class="slider__prev-arrow-down">
+							<svg class="description__button-img">
+								<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
+							</svg>
+						</div>
+					</button>
+					<button class="slider__up-slide" @click="slide('next')"><img class="control-slide__img" :src="nextButtonWorks[Index].photo" alt="slider3">
+						<div class="slider__prev-arrow-down">
+							<svg class="description__button-img">
+								<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_up"></use>
+							</svg>
+						</div>
+					</button>
 				</div>
 			</script>
 		</div>
