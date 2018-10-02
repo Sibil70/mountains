@@ -14,7 +14,6 @@ const skill = {
             const currentPercent = parseInt(
                 getComputedStyle(circle).getPropertyValue('stroke-dashoffset')
             );
-                // console.log(currentPercent);
     
             const requiredDashoffset = (currentPercent / 100) * (100-this.percentage);
     

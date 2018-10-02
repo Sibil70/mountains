@@ -8,6 +8,10 @@
     }
     &_margin_left{
         margin-left: 30px;
+        @include tablets {
+            text-align: center;
+            margin-left: initial;
+        }
     }
     &_align_right{
         text-align: right;

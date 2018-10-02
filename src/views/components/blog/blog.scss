@@ -2,10 +2,14 @@
   margin-top: 70px;
   display: flex;
   justify-content: center;
+  width:95%;
 }
 .blog-menu {
   margin-top: 5px;
   margin-right: 98px;
+  @include tablets {
+    display: none;
+  }
 }
 .blog-menu__item {
   text-align: right;

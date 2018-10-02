@@ -2,7 +2,7 @@ import Vue from 'vue';
 
 const info = {
     template: "#slider-info",
-    props:{
+    props: {
         work: Object
     }
 }
@@ -14,28 +14,28 @@ const display = {
 }
 const btns = {
     template: "#slider-btns",
-    props:{
+    props: {
         works: Array,
         Index: Number
     },
-    data(){
+    data() {
         return {
-             prevButtonWorks: [],
-             nextButtonWorks: [],
+            prevButtonWorks: [],
+            nextButtonWorks: [],
         }
     },
-    created (){
+    created() {
         this.prevButtonWorks = this.transformWorksForBtn('prev');
         this.nextButtonWorks = this.transformWorksForBtn('next');
     },
     methods: {
-        slide(direction){
+        slide(direction) {
             this.$emit('slide', direction);
         },
-        transformWorksForBtn(buttonDirection){
+        transformWorksForBtn(buttonDirection) {
             const worksArrayForBtn = [...this.works];
-            const lastItem = worksArrayForBtn[worksArrayForBtn.length-1];
-            switch(buttonDirection){
+            const lastItem = worksArrayForBtn[worksArrayForBtn.length - 1];
+            switch (buttonDirection) {
                 case 'prev':
                     worksArrayForBtn.unshift(lastItem);
                     worksArrayForBtn.pop();
@@ -52,49 +52,51 @@ const btns = {
 }
 
 
-new Vue ({
+new Vue({
     el: '#slider_component',
 
     components: {
-        info, display, btns
+        info,
+        display,
+        btns
     },
-    data(){
-        return{
+    data() {
+        return {
             works: [],
             currentIndex: 0
         }
     },
-    created () {
+    created() {
         const data = require('../../../views/components/templates/works.json');
         this.works = data;
     },
-    watch:{
-        currentIndex(value){
+    watch: {
+        currentIndex(value) {
             this.loopCurrentIndex(value);
         }
     },
     computed: {
-        currentWork(){
-        return this.works[this.currentIndex]
+        currentWork() {
+            return this.works[this.currentIndex]
         }
     },
     methods: {
-        loopCurrentIndex(value){
-            const worksAmountfromZero = this.works.length -1;
-            if (value>worksAmountfromZero) this.currentIndex = 0;
-            if (value<0) this.currentIndex = worksAmountfromZero;
+        loopCurrentIndex(value) {
+            const worksAmountfromZero = this.works.length - 1;
+            if (value > worksAmountfromZero) this.currentIndex = 0;
+            if (value < 0) this.currentIndex = worksAmountfromZero;
         },
         handleSlide(direction) {
-            switch(direction){
+            switch (direction) {
                 case "next":
                     this.currentIndex = this.currentIndex - 1;
-                break;
+                    break;
 
                 case "prev":
-                this.currentIndex = this.currentIndex + 1;
-                break;
+                    this.currentIndex = this.currentIndex + 1;
+                    break;
             }
-            console.log( this.currentIndex)
+            console.log(this.currentIndex)
         }
     },
     template: '#slider-root'

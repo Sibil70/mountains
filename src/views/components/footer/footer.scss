@@ -9,16 +9,31 @@
     &:first-child{
         border: 1px solid rgba($light-grey, 0.3);
     }
+    @include tablets {
+        flex-direction: column;
+        justify-content: center;
+        height: 100px;
+    }
 }
 .footer__col{
     flex: 1;
     display: flex;
+    @include tablets {
+        align-items: center;
+        justify-content: center;
+    }
 }
 .footer__col_justyfy_right {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    @include tablets{
+        align-items: center;
+    }
 }
 .footer__socials{
     margin-right: 30px;
+    @include tablets {
+        margin: initial;
+    }
 }

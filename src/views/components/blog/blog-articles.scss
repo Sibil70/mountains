@@ -1,3 +1,8 @@
+.articles{
+  @include tablets{
+    margin:0 4%;
+  }
+}
 .articles__item {
   border-bottom: 5px solid #00bfa5;
   border-color: rgba($grey, 0.07);
@@ -24,4 +29,15 @@
 .article__date {
   color: #00bfa5;
   margin-bottom: 28px;
+}
+.article__content{
+
+}
+.articletext{
+}
+.article__pic{
+  width:95%;
+}
+.article__img{
+  max-width:100%
 }

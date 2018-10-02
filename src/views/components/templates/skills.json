@@ -21,8 +21,7 @@
         "skills":{
             "Git": 30,
             "Gulp": 50,
-            "Yarn": 30,
-            "Webpack": 70
+            "Yarn": 30
         }
     }
 ]

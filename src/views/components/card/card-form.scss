@@ -37,6 +37,9 @@
         outline-color: transparent;
         border: 1px solid $green;
     }
+    @include tablets{
+        width: 260px;
+    }
 }
 .form__chkbox{
     margin-bottom: 15px;

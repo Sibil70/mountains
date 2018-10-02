@@ -22,6 +22,9 @@
     align-items: center;
     border-radius: 5px;
     padding-top: 44px;
+    @include tablets{
+        width: 350px;
+    }
 }
 .user__content {
 	display: flex;

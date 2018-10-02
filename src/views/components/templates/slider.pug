@@ -15,7 +15,7 @@ script(type='text/x-template')#slider-info
     .slider__description
         .description__container
             .description__title
-                h3.subtitle {{work.title}}
+                h3.subtitle.subtitle--slider {{work.title}}
             .description__tech {{work.skills}}
             a(:href='work.link' target="_blank").description__button.button
                 svg(class='description__button-img')
