@@ -16,7 +16,7 @@ script(type='text/x-template')#slider-info
         .description__container
             .description__title
                 h3.subtitle.subtitle--slider {{work.title}}
-            .description__tech {{work.skills}}
+            .description__text {{work.skills}}
             a(:href='work.link' target="_blank").description__button.button
                 svg(class='description__button-img')
                     use(xlink:href='./assets/images/icons/sprite.svg#link')
@@ -28,13 +28,13 @@ script(type='text/x-template')#slider-display
             img(:src='work.photo', alt='slider1', class='prev-slide__img')
 script(type='text/x-template')#slider-btns
     .slider__control-row
-        button(@click="slide('prev')").slider__down-slide
+        button(@click="slide('prev')").slider__button
             img(:src='prevButtonWorks[Index].photo', alt='slider2', class='control-slide__img')
-            .slider__prev-arrow-down
-                svg(class='description__button-img')
+            .slider__button-wrap
+                svg(class='slider__button-icon')
                     use(xlink:href='./assets/images/icons/sprite.svg#portf_arrow_down')
-        button(@click="slide('next')").slider__up-slide
+        button(@click="slide('next')").slider__button
             img(:src='nextButtonWorks[Index].photo', alt='slider3', class='control-slide__img')
-            .slider__prev-arrow-down
-                svg(class='description__button-img')
+            .slider__button-wrap
+                svg(class='slider__button-icon')
                     use(xlink:href='./assets/images/icons/sprite.svg#portf_arrow_up')

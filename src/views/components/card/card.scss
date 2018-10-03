@@ -10,7 +10,6 @@
 }
 .user {
     width: 385px;
-    height: 400px;
     background-color: $white;
     opacity: 0.9;
     position: absolute;
@@ -21,9 +20,11 @@
 	flex-direction: column;
     align-items: center;
     border-radius: 5px;
-    padding-top: 44px;
     @include tablets{
         width: 350px;
+    }
+    @include phones{
+        width: 300px;
     }
 }
 .user__content {
@@ -31,6 +32,12 @@
 	flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 44px;
+    margin-bottom: 40px;
+    @include phones {
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
 }
 .user__pic {
     border-radius: 50%;
@@ -43,12 +50,12 @@
     margin-top: 25px;
 }
 .user__pages{
+    align-self: flex-end;
 display: flex;
 justify-content: space-between;
 width: 100%;
 height: 45px;
 position: relative;
-top: 7.5%;
 background-color: rgba($green, 0.6);
 border-radius: 0 0 5px 5px;
 }

@@ -14,6 +14,9 @@
         justify-content: center;
         height: 100px;
     }
+    @include phones {
+        align-items: center;
+    }
 }
 .footer__col{
     flex: 1;
@@ -22,12 +25,18 @@
         align-items: center;
         justify-content: center;
     }
+    @include phones {
+        align-items: center;
+    }
 }
 .footer__col_justyfy_right {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     @include tablets{
+        align-items: center;
+    }
+    @include phones {
         align-items: center;
     }
 }

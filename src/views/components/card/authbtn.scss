@@ -14,4 +14,8 @@
         color: $green;
         cursor:pointer;
     }
+    @include phones {
+        align-self: center;
+        margin: 5px 0;
+    }
 }

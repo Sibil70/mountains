@@ -40,45 +40,47 @@
 				</div>
 			</div>
 			<div class="user user--back js-toggle">
-				<div class="auth__title">
-					<div class="title title--auth">Авторизуйтесь</div>
-				</div>
-				<div class="auth__form">
-					<div class="form">
-						<div class="form__input">
-							<div class="form__input-pic">
-								<svg class="form__input-icon">
-									<use xlink:href="./assets/images/icons/sprite.svg#login"></use>
-								</svg>
+				<div class="user__content">
+					<h1 class="user__title">
+						<div class="title title--auth">Авторизуйтесь</div>
+					</h1>
+					<div class="user__form">
+						<div class="form">
+							<div class="form__input">
+								<div class="form__input-pic">
+									<svg class="form__input-icon">
+										<use xlink:href="./assets/images/icons/sprite.svg#login"></use>
+									</svg>
+								</div>
+								<input class="form__input-field" type="text" required="required"/>
 							</div>
-							<input class="form__input-field" type="text" required="required"/>
-						</div>
-						<div class="form__input">
-							<div class="form__input-pic">
-								<svg class="form__input-icon">
-									<use xlink:href="./assets/images/icons/sprite.svg#password"></use>
-								</svg>
+							<div class="form__input">
+								<div class="form__input-pic">
+									<svg class="form__input-icon">
+										<use xlink:href="./assets/images/icons/sprite.svg#password"></use>
+									</svg>
+								</div>
+								<input class="form__input-field" type="text" required="required"/>
 							</div>
-							<input class="form__input-field" type="text" required="required"/>
-						</div>
-						<div class="form__chkbox">
-							<label class="form__chkbox-wrap">
-								<input class="form__check" type="checkbox"/>
-								<svg class="form__check-fake">
-									<use xlink:href="./assets/images/icons/sprite.svg#check"></use>
-								</svg><span class="form__check-text">я человек</span>
-							</label>
-						</div>
-						<div class="form__question"> <span class="form__question-text">Вы точно не робот?</span>
-							<div class="form__question-btns">
-								<label class="form__question-wrap" for="yes">
-									<input class="form__radio" type="radio" name="not-robot" value="yes" id="yes"/>
-									<div class="form__radio-fake"></div><span class="form__radio-text">Да</span>
+							<div class="form__chkbox">
+								<label class="form__chkbox-wrap">
+									<input class="form__check" type="checkbox"/>
+									<svg class="form__check-fake">
+										<use xlink:href="./assets/images/icons/sprite.svg#check"></use>
+									</svg><span class="form__check-text">я человек</span>
 								</label>
-								<label class="form__question-wrap" for="no">
-									<input class="form__radio" type="radio" name="not-robot" value="no" id="no"/>
-									<div class="form__radio-fake"></div><span class="form__radio-text">Не уверен</span>
-								</label>
+							</div>
+							<div class="form__question"> <span class="form__question-text">Вы точно не робот?</span>
+								<div class="form__question-btns">
+									<label class="form__question-wrap" for="yes">
+										<input class="form__radio" type="radio" name="not-robot" value="yes" id="yes"/>
+										<div class="form__radio-fake"></div><span class="form__radio-text">Да</span>
+									</label>
+									<label class="form__question-wrap" for="no">
+										<input class="form__radio" type="radio" name="not-robot" value="no" id="no"/>
+										<div class="form__radio-fake"></div><span class="form__radio-text">Не уверен</span>
+									</label>
+								</div>
 							</div>
 						</div>
 					</div>

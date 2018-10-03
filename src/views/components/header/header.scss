@@ -4,16 +4,25 @@
     background: url(./assets/images/bg/hero.jpg)center center / cover  no-repeat;
     clip-path: polygon(0% 0%, 0% 80%, 50% 100%, 100% 80%, 100% 0%);
     color: $white;
+    @include phones {
+        height: 100vh;
+    }
 }
 .header__links {
     position: absolute;
     top: 20px;
     left: 30px;
+    @include phones {
+        left: 10px;
+    }
 }
 .header__menu{
     position: absolute;
     top: 20px;
     right: 50px;
+    @include phones {
+        right: 10px;
+    }
 }
 .header__content{
     position: absolute;
@@ -29,6 +38,10 @@
     border-radius: 100%;
     overflow: hidden;
 }
+.header__title{
+    text-align: center;
+    white-space: nowrap;
+}
 .header__btn{
     width: 30px;
     height: 30px;
@@ -36,4 +49,8 @@
     top: 500px;
     left: 50%;
     transform: translate(-50%, 0);
+    @include phones {
+        bottom: 80%;
+        top: initial;
+    }
 }

@@ -13,10 +13,11 @@ button.authbtn.js-toggleBtn Авторизоваться
             .user__block: a.user__page(href="./about.html") Обо мне
             .user__block: a.user__page(href="./blog.html") Блог
 .user.user--back.js-toggle
-    .auth__title
-        .title.title--auth Авторизуйтесь
-    .auth__form
-        include ../form/form
+    .user__content
+        h1.user__title
+            .title.title--auth Авторизуйтесь
+        .user__form
+            include ../form/form
     .user__pages
           .user__block: button.user__page.js-toggleBtn На главную
           .user__block: button.user__page(type='submit') Войти

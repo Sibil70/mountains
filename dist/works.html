@@ -88,10 +88,12 @@
 					</div>
 					<div class="feedback-container">
 						<form class="feedback-form">
-							<div class="subtitle subtitle__feedback">Связаться со мной</div>
-							<input class="input__text input__name" placeholder="Имя">
-							<input class="input__text input__email" placeholder="Email">
-							<input class="input__text input__message" placeholder="Ваше сообщение">
+							<div class="feedback__subtitle">
+								<div class="subtitle">Связаться со мной</div>
+							</div>
+							<input class="feedback__text input__name" placeholder="Имя">
+							<input class="feedback__text input__email" placeholder="Email">
+							<input class="feedback__text feedback__text--message" placeholder="Ваше сообщение">
 							<div class="buttons__row">
 								<button class="button button__send" type="submit">Отправить</button>
 								<button class="button button__clear" type="reset">Очистить</button>
@@ -203,7 +205,7 @@
 						<div class="description__title">
 							<h3 class="subtitle subtitle--slider">{{work.title}}</h3>
 						</div>
-						<div class="description__tech">{{work.skills}}</div><a class="description__button button" :href="work.link" target="_blank">
+						<div class="description__text">{{work.skills}}</div><a class="description__button button" :href="work.link" target="_blank">
 							<svg class="description__button-img">
 								<use xlink:href="./assets/images/icons/sprite.svg#link"></use>
 							</svg><span class="description__button-text">Посмотреть сайт</span></a>
@@ -217,16 +219,16 @@
 			</script>
 			<script type="text/x-template" id="slider-btns">
 				<div class="slider__control-row">
-					<button class="slider__down-slide" @click="slide('prev')"><img class="control-slide__img" :src="prevButtonWorks[Index].photo" alt="slider2">
-						<div class="slider__prev-arrow-down">
-							<svg class="description__button-img">
+					<button class="slider__button" @click="slide('prev')"><img class="control-slide__img" :src="prevButtonWorks[Index].photo" alt="slider2">
+						<div class="slider__button-wrap">
+							<svg class="slider__button-icon">
 								<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
 							</svg>
 						</div>
 					</button>
-					<button class="slider__up-slide" @click="slide('next')"><img class="control-slide__img" :src="nextButtonWorks[Index].photo" alt="slider3">
-						<div class="slider__prev-arrow-down">
-							<svg class="description__button-img">
+					<button class="slider__button" @click="slide('next')"><img class="control-slide__img" :src="nextButtonWorks[Index].photo" alt="slider3">
+						<div class="slider__button-wrap">
+							<svg class="slider__button-icon">
 								<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_up"></use>
 							</svg>
 						</div>

@@ -5,18 +5,6 @@
     font-family: 'bernier';
     font-size: 48px;
     position: relative;
-    &--auth{
-        font-size: 32px;
-    }
-    &--clean{
-        &:before {
-            content: none;
-          }
-        
-          &:after {
-            content: none;
-          }
-    }
     &:before {
         content: "";
         display: inline-block;
@@ -26,7 +14,11 @@
                 opacity: 0.4;
         position: absolute;
         top: 50%;
-        transform: translate(-200%, -50%)
+        transform: translate(-200%, -50%);
+        @include phones {
+            width: 10px;
+            border: 2px solid $grey;
+        }
     }
     &:after {
         content: "";
@@ -37,8 +29,29 @@
         opacity: 0.4;
         position: absolute;
         top: 50%;
-        transform: translate(100%, -50%)
+        transform: translate(100%, -50%);
+        @include phones {
+            width: 10px;
+            border: 2px solid $grey;
+        }
     }
+    &--auth{
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    &--clean{
+        &:before {
+            content: none;
+          }
+        
+          &:after {
+            content: none;
+          }
+    }
+    @include phones {
+        font-size:  35px;
+    }
+
 }
 .subtitle{
     color: $text-color;
@@ -54,7 +67,11 @@
         opacity: 0.4;
         position: absolute;
         top: 50%;
-        transform: translate(-200%, -50%)
+        transform: translate(-200%, -50%);
+        @include phones {
+            width: 10px;
+            border: 2px solid $grey;
+        }
     }
     &:after {
         content: "";
@@ -65,7 +82,11 @@
         opacity: 0.4;
         position: absolute;
         top: 50%;
-        transform: translate(100%, -50%)
+        transform: translate(100%, -50%);
+        @include phones {
+            width: 10px;
+            border: 2px solid $grey;
+        }
     }
 }
 .subtitle--slider::after{
@@ -74,11 +95,4 @@
 .auth__title{
     margin-bottom: 18px;
 }
-.reviews__title {
-    background: $white;
-    background: #faf8f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-  }
+

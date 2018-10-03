@@ -40,6 +40,9 @@
     @include tablets{
         width: 260px;
     }
+    @include phones {
+        width: 220px;
+    }
 }
 .form__chkbox{
     margin-bottom: 15px;

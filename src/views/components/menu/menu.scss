@@ -12,6 +12,9 @@
     &:first-child{
         margin-left: 30px;
     }
+    @include phones{
+        margin-right: 5px;
+    }
 }
 .menu__link{
     text-decoration: none;

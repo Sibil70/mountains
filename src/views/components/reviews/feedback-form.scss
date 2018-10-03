@@ -5,25 +5,27 @@
   justify-content: center;
   align-items: center;
   margin-bottom: calc(140px + 30px);
-
+  @include phones {
+    margin-bottom: 120px;
+  }
 }
 .feedback-form {
   width: 380px;
-  height: 437px;
   background: $white;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 5px;
+  @include phones {
+    width:300px;
+  }
 }
-
-.subtitle__feedback {
+.feedback__subtitle {
   margin-top: 39px;
   margin-bottom: 30px;
   max-width: 380px;
 }
-
-.input__text {
+.feedback__text {
   height: 45px;
   width: 340px;
   margin-bottom: 20px;
@@ -34,20 +36,17 @@
     outline: transparent;
     border: 1px solid $green;
   }
+  @include phones {
+    width: 280px;
+  }
+  &--message {
+    height: 140px;
+  }
 }
-
-.input__message {
-  height: 140px;
-  border: 1px solid white;
-  display: flex;
-  align-items: flex-start;
-}
-
 .buttons__row {
   width: 100%;
   display: flex;
 }
-
 .button__send, .button__clear {
   width: 50%;
   text-align: center;
@@ -59,7 +58,6 @@
   color: white;
   border-radius: 0;
 }
-
 .button {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;

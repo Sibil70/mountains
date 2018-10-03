@@ -1,10 +1,10 @@
 .slider {
-  min-width: 400px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   background: $light-grey;
+
 }
 .slider__title{
   flex: 1 1 100%;
@@ -20,7 +20,6 @@ grid-template:
   "info display" 70%
   "info btns" 30%
   /2fr 1fr;
-
   @include narrow {
     grid-template: 
     "display" 100%
@@ -29,8 +28,6 @@ grid-template:
     /1fr
   }
 }
-
-
 .slider__description{
   grid-area: info;
   display: flex;
@@ -42,25 +39,15 @@ grid-template:
     margin-bottom: 20px;
   }
 }
-
-.slider__preview {
-  grid-area: display;
-}
-
-.slider__control-row{
-  grid-area: btns;
-  user-select: none;
-  display: flex;
-}
 .description__container{
+  padding-top: 20px;
   max-width: 420px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.description__tech {
+.description__text {
   width: 100%;
   text-align: center;
   color: $green;
@@ -69,6 +56,7 @@ grid-template:
   text-transform: uppercase;
   padding-top: 19px;
   padding-bottom: 19px;
+  border-top: 2px solid rgba($green, 0.3);
   border-bottom: 2px solid rgba($green, 0.3);
   margin-bottom: 39px;
 }
@@ -77,7 +65,6 @@ grid-template:
   margin-bottom: 38px;
   text-align: center;
 }
-
 .description__button {
   background: $green;
   display: flex;
@@ -88,45 +75,44 @@ grid-template:
     text-decoration: none;
   }
 }
-
 .description__button-img {
   width: 20px;
-  height: 19px;
+  height: 20px;
   fill: white;
-  margin-right: 11px;
+  margin-right: 10px;
 }
-
+.slider__preview {
+  grid-area: display;
+}
 .slider__prev-slide {
-  max-width: 600px;
-  min-height: 525px;
   display: flex;
   justify-content: center;
   align-items: center;
-  @include narrow{
-  }
+}
+.slider__control-row{
+  grid-area: btns;
+  user-select: none;
+  display: flex;
 }
 .prev-slide__img{
   max-width:100%;
   max-height:100%;
   vertical-align:middle;
 }
-
-
-.slider__up-slide, .slider__down-slide {
+.slider__button {
   margin: 0;
   padding: 0;
   position: relative;
-  min-height: 225px;
-  min-width: 300px;
   background-color: rgba(136, 131, 114, 0.5);
   transition: .1s;
-
+  &:first-child {
+    border-right: 1px solid #c0bfbb;
+  }
+  @include phones {
+    min-width: 50%;
+  }
 }
-
-.slider__down-slide {
-  border-right: 1px solid #c0bfbb;
-}
-.slider__prev-arrow-down {
+.slider__button-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,7 +128,19 @@ grid-template:
     background-color: rgba(182, 180, 174, 0.7);
   }
 }
+.slider__button-icon{
+  width: 40px;
+  height: 40px;
+  fill: white;
+  &:hover {
+    transform: scale(1.5);
+  }
+}
 .control-slide__img {
   width: 300px;
   height: 225px;
+  @include phones {
+    width: 100%;
+    height: auto;
+  }
 }

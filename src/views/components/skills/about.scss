@@ -28,6 +28,9 @@
             align-items: center;
         }
     }
+    @include phones {
+        padding-left: 20px;
+    }
 }
 .about__title{
     margin-bottom: 40px;

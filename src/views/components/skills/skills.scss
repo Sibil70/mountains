@@ -35,7 +35,10 @@
         margin-right: 0;
     }
     @include phones {
-        margin: 0;
+        margin: 5px;
+        &:last-child{
+            margin-right: 0;
+        }
     }
 }
 .skills__row-item{
@@ -44,7 +47,7 @@
     flex-wrap: wrap;
     @include phones {
         justify-content: space-around;
-        flex-wrap: no-wrap;
+        flex-wrap: wrap;
     }
 
 }
