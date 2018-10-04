@@ -11,86 +11,88 @@
 	<div class="wrapper">
 		<div class="container welcome-container">
 			<button class="authbtn js-toggleBtn">Авторизоваться</button>
-			<div class="user user--front">
-				<div class="user__content">
-					<div class="user__pic"><img class="user__img" src="./assets/images/content/user.jpg"/></div>
-					<h1 class="user__title">Варнаев Александр</h1>
-					<div class="user__txt">личный сайт разработчика</div>
-					<div class="user__socials">
-												<ul class="socials">
-													<li class="socials__item"><a class="socials__linkundefined" href="https://vk.com/id6802343">
-															<svg class="socials__icon socials__icon--card">
-																<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
-															</svg></a></li>
-													<li class="socials__item"><a class="socials__linkundefined" href="https://github.com/Sibil70">
-															<svg class="socials__icon socials__icon--card">
-																<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
-															</svg></a></li>
-													<li class="socials__item"><a class="socials__linkundefined" href="https://www.instagram.com/alexandervarnaev">
-															<svg class="socials__icon socials__icon--card">
-																<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
-															</svg></a></li>
-												</ul>
+			<div class="cardwrap">
+				<div class="user user--front">
+					<div class="user__content">
+						<div class="user__pic"><img class="user__img" src="./assets/images/content/user.jpg"/></div>
+						<h1 class="user__title">Варнаев Александр</h1>
+						<div class="user__txt">личный сайт разработчика</div>
+						<div class="user__socials">
+														<ul class="socials">
+															<li class="socials__item"><a class="socials__linkundefined" href="https://vk.com/id6802343">
+																	<svg class="socials__icon socials__icon--card">
+																		<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+																	</svg></a></li>
+															<li class="socials__item"><a class="socials__linkundefined" href="https://github.com/Sibil70">
+																	<svg class="socials__icon socials__icon--card">
+																		<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+																	</svg></a></li>
+															<li class="socials__item"><a class="socials__linkundefined" href="https://www.instagram.com/alexandervarnaev">
+																	<svg class="socials__icon socials__icon--card">
+																		<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
+																	</svg></a></li>
+														</ul>
+						</div>
+					</div>
+					<div class="user__pages">
+						<div class="user__block"><a class="user__page" href="./works.html">Мои работы</a></div>
+						<div class="user__block"><a class="user__page" href="./about.html">Обо мне</a></div>
+						<div class="user__block"><a class="user__page" href="./blog.html">Блог</a></div>
 					</div>
 				</div>
-				<div class="user__pages">
-					<div class="user__block"><a class="user__page" href="./works.html">Мои работы</a></div>
-					<div class="user__block"><a class="user__page" href="./about.html">Обо мне</a></div>
-					<div class="user__block"><a class="user__page" href="./blog.html">Блог</a></div>
-				</div>
-			</div>
-			<div class="user user--back js-toggle">
-				<div class="user__content">
-					<h1 class="user__title">
-						<div class="title title--auth">Авторизуйтесь</div>
-					</h1>
-					<div class="user__form">
-						<div class="form">
-							<div class="form__input">
-								<div class="form__input-pic">
-									<svg class="form__input-icon">
-										<use xlink:href="./assets/images/icons/sprite.svg#login"></use>
-									</svg>
+				<div class="user user--back js-toggle">
+					<div class="user__content">
+						<h1 class="user__title">
+							<div class="title title--auth">Авторизуйтесь</div>
+						</h1>
+						<div class="user__form">
+							<div class="form">
+								<div class="form__input">
+									<div class="form__input-pic">
+										<svg class="form__input-icon">
+											<use xlink:href="./assets/images/icons/sprite.svg#login"></use>
+										</svg>
+									</div>
+									<input class="form__input-field" type="text" required="required"/>
 								</div>
-								<input class="form__input-field" type="text" required="required"/>
-							</div>
-							<div class="form__input">
-								<div class="form__input-pic">
-									<svg class="form__input-icon">
-										<use xlink:href="./assets/images/icons/sprite.svg#password"></use>
-									</svg>
+								<div class="form__input">
+									<div class="form__input-pic">
+										<svg class="form__input-icon">
+											<use xlink:href="./assets/images/icons/sprite.svg#password"></use>
+										</svg>
+									</div>
+									<input class="form__input-field" type="text" required="required"/>
 								</div>
-								<input class="form__input-field" type="text" required="required"/>
-							</div>
-							<div class="form__chkbox">
-								<label class="form__chkbox-wrap">
-									<input class="form__check" type="checkbox"/>
-									<svg class="form__check-fake">
-										<use xlink:href="./assets/images/icons/sprite.svg#check"></use>
-									</svg><span class="form__check-text">я человек</span>
-								</label>
-							</div>
-							<div class="form__question"> <span class="form__question-text">Вы точно не робот?</span>
-								<div class="form__question-btns">
-									<label class="form__question-wrap" for="yes">
-										<input class="form__radio" type="radio" name="not-robot" value="yes" id="yes"/>
-										<div class="form__radio-fake"></div><span class="form__radio-text">Да</span>
+								<div class="form__chkbox">
+									<label class="form__chkbox-wrap">
+										<input class="form__check" type="checkbox"/>
+										<svg class="form__check-fake">
+											<use xlink:href="./assets/images/icons/sprite.svg#check"></use>
+										</svg><span class="form__check-text">я человек</span>
 									</label>
-									<label class="form__question-wrap" for="no">
-										<input class="form__radio" type="radio" name="not-robot" value="no" id="no"/>
-										<div class="form__radio-fake"></div><span class="form__radio-text">Не уверен</span>
-									</label>
+								</div>
+								<div class="form__question"> <span class="form__question-text">Вы точно не робот?</span>
+									<div class="form__question-btns">
+										<label class="form__question-wrap" for="yes">
+											<input class="form__radio" type="radio" name="not-robot" value="yes" id="yes"/>
+											<div class="form__radio-fake"></div><span class="form__radio-text">Да</span>
+										</label>
+										<label class="form__question-wrap" for="no">
+											<input class="form__radio" type="radio" name="not-robot" value="no" id="no"/>
+											<div class="form__radio-fake"></div><span class="form__radio-text">Не уверен</span>
+										</label>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="user__pages">
-					<div class="user__block">
-						<button class="user__page js-toggleBtn">На главную</button>
-					</div>
-					<div class="user__block">
-						<button class="user__page" type="submit">Войти</button>
+					<div class="user__pages">
+						<div class="user__block">
+							<button class="user__page js-toggleBtn">На главную</button>
+						</div>
+						<div class="user__block">
+							<button class="user__page" type="submit">Войти</button>
+						</div>
 					</div>
 				</div>
 			</div>
