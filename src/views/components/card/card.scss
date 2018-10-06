@@ -1,16 +1,37 @@
 .welcome-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(./assets/images/bg/hero.jpg)center center / cover  no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
-.cardwrap{
+.parralax__layer{
+    position:   absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.parralax__layer-img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.welcome__btn{
+    z-index: 1;
+    align-self: flex-end;
+    margin: 40px 40px 0 0;
+    @include phones {
+        align-self: center;
+        margin: 5px 0;
+    }
+}
+.welcome__card{
     align-self: center;
     width: 385px;
     height: 400px;
@@ -95,6 +116,9 @@ border-right: $light-grey 2px solid;
 }
 .js-toggle{
     transform: rotateY(180deg);
-
     transition: 1s;
+}
+.welcome__copyright{
+    margin-bottom: 2%;
+    z-index: 1;
 }
