@@ -1,6 +1,6 @@
 const parralax = (function () {
     const bg = document.querySelector('.header__background');
-
+    
     return {
         move: function (block, windowScroll, strafeAmount) {
             var strafe = windowScroll / -strafeAmount + '%';

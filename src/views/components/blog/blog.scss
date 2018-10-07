@@ -3,10 +3,13 @@
   display: flex;
   justify-content: center;
   width:95%;
+  align-items: flex-start;
 }
 .blog-menu {
   margin-top: 5px;
   margin-right: 98px;
+  position: sticky;
+  top: 2rem;
   @include tablets {
     display: none;
   }

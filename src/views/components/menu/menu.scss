@@ -11,6 +11,9 @@
     }
     &:first-child{
         margin-left: 30px;
+        @include phones {
+            margin-left: 0;
+        }
     }
     @include narrow {
         margin-right: 20px;

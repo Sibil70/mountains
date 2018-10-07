@@ -10,6 +10,7 @@ blurelwraper.style.height = height;
 
 const reviewsbg = document.querySelector('.reviews');
 const bgwidth = getComputedStyle(reviewsbg).width;
+const bgheight = getComputedStyle(reviewsbg).height;
 
 blurelem.style.backgroundSize = bgwidth;
 
@@ -19,9 +20,13 @@ var blur = (function () {
         set: function (){
             var posLeft = -blurelwraper.offsetLeft,
                 posTop = -blurelwraper.offsetTop,
+                imgWidth = bgwidth,
+                imgHeight = bgheight,
                 blurCSS = blurelem.style;
             
-            blurCSS.backgroundPosition = `${posLeft}px ${posTop}px`
+            blurCSS.backgroundPosition = `${posLeft}px ${posTop}px`;
+            blurCSS.backgroundSize = `${imgWidth}px ${igmHeight}px`;
+
         }
     }
 })();

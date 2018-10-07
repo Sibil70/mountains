@@ -9,6 +9,9 @@
     justify-content: space-between;
     align-items: center;
 }
+.welcome-container__parralax {
+    position: absolute;
+}
 .parralax__layer{
     position:   absolute;
     top: 0;
@@ -36,6 +39,9 @@
     width: 385px;
     height: 400px;
     perspective: 1000px;
+    @include phones {
+        width: 300px;
+    }
 }
 .user {
     width: 385px;

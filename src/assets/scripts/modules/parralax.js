@@ -1,5 +1,5 @@
 
-const parralax = document.querySelector('.welcome-container'),
+const parralax = document.querySelector('.welcome-container__parralax'),
       layers = Array.from(parralax.children);
 
 const moveLayers = e => {
@@ -7,7 +7,7 @@ const moveLayers = e => {
     const initialY = (window.innerHeight/2) - e.pageY;
     
     layers.forEach((layer,i)=>{
-        const divider = (i/40),
+        const divider = (i/70),
             positionX = initialX*divider,
             positionY = initialY*divider;
 

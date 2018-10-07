@@ -29,7 +29,8 @@
         }
     }
     @include phones {
-        padding-left: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 .about__title{
@@ -46,7 +47,7 @@
         width: 26rem;
     }
     @include phones {
-        width: 20rem;
+        width: 300px;
     }
 }
 .about__right-title{
@@ -60,7 +61,7 @@
         width: 26rem;
     }
     @include phones {
-        width: 20rem;
+        width: 300px;
     }
 }
 .about__info-container{

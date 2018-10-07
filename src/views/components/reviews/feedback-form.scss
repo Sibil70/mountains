@@ -11,12 +11,12 @@
 }
 .feedback__blur{
   position: relative;
-  width: 300px;
-  height: 300px;
+  // overflow: hidden;
+  // border-radius: 5px;
   
 }
 .feedback__blur-elem{
-  filter: blur(20px);
+  filter: blur(10px);
   background: url('./assets/images/bg/bg.png');
   background-position: 100px, 100px;
   background-size: cover;
@@ -77,9 +77,13 @@
   color: white;
   border-radius: 0;
 }
-.button {
+.button__send{
   border-bottom-left-radius: 5px;
+}
+.button__clear{
   border-bottom-right-radius: 5px;
+}
+.button {
   border-right: $light-grey 2px solid;
   &:last-child {
       border: none;
