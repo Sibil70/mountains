@@ -93,7 +93,7 @@ loginBtn.addEventListener('click', function (e) {
          return overlayElement;
         }
 
-    };
+    }
 
     function validateForm(form) {
         let valid = true;
