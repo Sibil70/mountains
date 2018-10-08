@@ -25,7 +25,7 @@ var blur = (function () {
                 blurCSS = blurelem.style;
             
             blurCSS.backgroundPosition = `${posLeft}px ${posTop}px`;
-            blurCSS.backgroundSize = `${imgWidth}px ${igmHeight}px`;
+            blurCSS.backgroundSize = `${imgWidth}px ${imgHeight}px`;
 
         }
     }

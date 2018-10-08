@@ -8,17 +8,6 @@
 		<link rel="stylesheet" href="main.min.css"/>
 	</head>
 	<body></body>
-	<div class="preloader preloader--active" id="preloader">
-		<div class="preloader__bg"><img class="preloader__bg-img" src="./assets/images//preloader/bg.jpg" alt="background"/>
-		</div>
-		<div class="preloader__svg">
-			<svg class="preloader__circle" viewbox="0 0 110 110">
-				<circle class="preloader__svg-img preloader__svg-img--1" r="16" cx="50%" cy="50%"></circle>
-				<circle class="preloader__svg-img preloader__svg-img--2" r="13" cx="50%" cy="50%"></circle>
-				<circle class="preloader__svg-img preloader__svg-img--3" r="10" cx="50%" cy="50%"></circle>
-			</svg>
-		</div><span class="preloader__text" id="preloader__text">0%</span>
-	</div>
 	<div class="wrapper">
 		<div class="container welcome-container">
 			<div class="welcome-container__parralax">
@@ -77,14 +66,15 @@
 							<div class="title title--auth">Авторизуйтесь</div>
 						</h1>
 						<div class="user__form">
-							<div class="form">
+							<form class="form" id="authform">
 								<div class="form__input">
 									<div class="form__input-pic">
 										<svg class="form__input-icon">
 											<use xlink:href="./assets/images/icons/sprite.svg#login"></use>
 										</svg>
 									</div>
-									<input class="form__input-field" type="text" required="required"/>
+									<input class="form__input-field" type="text" name="user" required="required"/>
+									<div class="error"></div>
 								</div>
 								<div class="form__input">
 									<div class="form__input-pic">
@@ -92,29 +82,31 @@
 											<use xlink:href="./assets/images/icons/sprite.svg#password"></use>
 										</svg>
 									</div>
-									<input class="form__input-field" type="password" required="required"/>
+									<input class="form__input-field" type="password" name="password" required="required"/>
+									<div class="error"></div>
 								</div>
 								<div class="form__chkbox">
 									<label class="form__chkbox-wrap">
-										<input class="form__check" type="checkbox"/>
+										<input class="form__check" type="checkbox" name="human"/>
 										<svg class="form__check-fake">
 											<use xlink:href="./assets/images/icons/sprite.svg#check"></use>
 										</svg><span class="form__check-text">я человек</span>
+										<div class="error"></div>
 									</label>
 								</div>
 								<div class="form__question"> <span class="form__question-text">Вы точно не робот?</span>
 									<div class="form__question-btns">
 										<label class="form__question-wrap" for="yes">
-											<input class="form__radio" type="radio" name="not-robot" value="yes" id="yes"/>
+											<input class="form__radio" type="radio" name="robot" value="yes" id="yes"/>
 											<div class="form__radio-fake"></div><span class="form__radio-text">Да</span>
 										</label>
 										<label class="form__question-wrap" for="no">
-											<input class="form__radio" type="radio" name="not-robot" value="no" id="no"/>
+											<input class="form__radio" type="radio" name="robot" value="no" id="no"/>
 											<div class="form__radio-fake"></div><span class="form__radio-text">Не уверен</span>
 										</label>
 									</div>
 								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 					<div class="user__pages">
@@ -122,7 +114,7 @@
 							<button class="user__page js-toggleBtn">На главную</button>
 						</div>
 						<div class="user__block">
-							<button class="user__page" type="submit">Войти</button>
+							<button class="user__page" id="loginBtn" type="submit">Войти</button>
 						</div>
 					</div>
 				</div>

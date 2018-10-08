@@ -66,20 +66,22 @@ new Vue({
             currentIndex: 0
         }
     },
-    created() {
-        const data = require('../../../views/components/templates/works.json');
-        this.works = data;
+    computed: {
+        currentWork() {
+            return this.works[this.currentIndex]
+        }
     },
     watch: {
         currentIndex(value) {
             this.loopCurrentIndex(value);
         }
     },
-    computed: {
-        currentWork() {
-            return this.works[this.currentIndex]
-        }
+    created() {
+        const data = require('../../../views/components/templates/works.json');
+        this.works = data;
     },
+
+
     methods: {
         loopCurrentIndex(value) {
             const worksAmountfromZero = this.works.length - 1;
@@ -96,7 +98,7 @@ new Vue({
                     this.currentIndex = this.currentIndex + 1;
                     break;
             }
-            console.log(this.currentIndex)
+            // console.log(this.currentIndex)
         }
     },
     template: '#slider-root'
