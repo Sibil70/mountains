@@ -119,13 +119,10 @@ loginBtn.addEventListener('click', function (e) {
 
         if (!field.checkValidity()){
             field.nextElementSibling.textContent = field.validationMessage;
-            
             field.nextElementSibling.classList.remove('error');
             field.nextElementSibling.classList.add('errorMessage');
             field.classList.add('form__input-field--error');
             field.previousElementSibling.firstElementChild.classList.add('form__input-icon--error');
-            // var svgImg = document.querySelector ('.form__input-pic--error');
-            // svgImg.firstElementChild.classList.add('form__input-icon--error');
 
             return false;
         } else {

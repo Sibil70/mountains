@@ -206,10 +206,10 @@ eval("\n\n__webpack_require__(/*! ./modules/fullscreenmenu */ \"./src/assets/scr
 /*!***************************************************!*\
   !*** ./src/views/components/templates/works.json ***!
   \***************************************************/
-/*! exports provided: 0, 1, 2, 3, default */
+/*! exports provided: 0, 1, 2, default */
 /***/ (function(module) {
 
-eval("module.exports = [{\"id\":1,\"title\":\"1 Сайт школы онлайн образования\",\"skills\":\"1 Html, Css, JavaScript\",\"photo\":\"./assets/images/content/slider1.png\",\"link\":\"//google.com\"},{\"id\":2,\"title\":\"2 Сайт школы онлайн образования\",\"skills\":\"2 Html, Css, JavaScript\",\"photo\":\"./assets/images/content/slider2.png\",\"link\":\"//yandex.ru\"},{\"id\":3,\"title\":\"3 Сайт школы онлайн образования\",\"skills\":\"3 Html, Css, JavaScript\",\"photo\":\"./assets/images/content/slider3.png\",\"link\":\"//rambler.ru\"},{\"id\":4,\"title\":\"4 Сайт школы онлайн образования\",\"skills\":\"4 Html, Css, JavaScript\",\"photo\":\"./assets/images/content/slider4.png\",\"link\":\"//vk.com\"}];\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3NyYy92aWV3cy9jb21wb25lbnRzL3RlbXBsYXRlcy93b3Jrcy5qc29uLmpzIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/views/components/templates/works.json\n");
+eval("module.exports = [{\"id\":1,\"title\":\"Сайт фитнес центра\",\"skills\":\" HTML, CSS\",\"photo\":\"./assets/images/content/fitness1.jpg\",\"link\":\"https://sibil70.github.io/AFrodita/\"},{\"id\":2,\"title\":\"Сайт магазина бургеров\",\"skills\":\"Html, SCSS, JS, JQuerry, YandexApi\",\"photo\":\"./assets/images/content/burger1.jpg\",\"link\":\"https://sibil70.github.io/Burgers/\"},{\"id\":3,\"title\":\"Сайт портфолио\",\"skills\":\"Pug, SCSS, JS, Vue.js, Gulp, npm\",\"photo\":\"./assets/images/content/portf4.jpg\",\"link\":\"https://sibil70.github.io/mountains/dist/index.html\"}];\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3NyYy92aWV3cy9jb21wb25lbnRzL3RlbXBsYXRlcy93b3Jrcy5qc29uLmpzIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/views/components/templates/works.json\n");
 
 /***/ })
 

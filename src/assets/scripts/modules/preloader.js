@@ -1,4 +1,4 @@
-const preload = (function () {
+(function () {
 
     const preloader = document.querySelector('.preloader'),
         preloaderText = document.querySelector('.preloader__text'),
