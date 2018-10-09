@@ -1,6 +1,7 @@
 const form = document.querySelector('#authform');
 const loginBtn = document.querySelector('#loginBtn');
 
+
 loginBtn.addEventListener('click', function (e) {
     e.preventDefault();
 
@@ -19,79 +20,77 @@ loginBtn.addEventListener('click', function (e) {
             console.log (xhr.response);
         });
 
-        const successOverlay = openOverlay("Сообщение отправлено");
+        // const successOverlay = openOverlay("Сообщение отправлено");
 
-                document.body.appendChild(successOverlay);
+        //         document.body.appendChild(successOverlay);
 
-                function openOverlay(content) {
-                const overlayElement = document.createElement("div");
-                overlayElement.classList.add("orderoverlay");
+        //         function openOverlay(content) {
+        //         const overlayElement = document.createElement("div");
+        //         overlayElement.classList.add("orderoverlay");
 
-                const containerElement = document.createElement("div");
-                containerElement.classList.add("overlaycontainer");
+        //         const containerElement = document.createElement("div");
+        //         containerElement.classList.add("overlaycontainer");
 
-                const contentElement = document.createElement("div");
-                contentElement.classList.add("content");
+        //         const contentElement = document.createElement("div");
+        //         contentElement.classList.add("content");
 
-                const textElement = document.createElement("div");
-                textElement.classList.add("overlaytext");
-                textElement.innerHTML = content;
+        //         const textElement = document.createElement("div");
+        //         textElement.classList.add("overlaytext");
+        //         textElement.innerHTML = content;
 
-                const closeElement = document.createElement("button");
-                closeElement.classList.add("button");
-                closeElement.classList.add("button--red");
-                closeElement.classList.add("button--marginbottom");
-                closeElement.textContent = "закрыть";
-                closeElement.addEventListener("click", function(e) {
-                    e.preventDefault ();
-                    document.body.removeChild(overlayElement);
-                });
+        //         const closeElement = document.createElement("button");
+        //         closeElement.classList.add("button");
+        //         closeElement.classList.add("button--overlay");
+        //         closeElement.textContent = "закрыть";
+        //         closeElement.addEventListener("click", function(e) {
+        //             e.preventDefault ();
+        //             document.body.removeChild(overlayElement);
+        //         });
 
-                overlayElement.appendChild(containerElement);
-                containerElement.appendChild(contentElement);
-                contentElement.appendChild(textElement);
-                contentElement.appendChild(closeElement);
+        //         overlayElement.appendChild(containerElement);
+        //         containerElement.appendChild(contentElement);
+        //         contentElement.appendChild(textElement);
+        //         contentElement.appendChild(closeElement);
 
-                 return overlayElement;
-                }
+        //          return overlayElement;
+        //         }
 
     } else {
-        console.log ('smth wrong!');
-        const failOverlay = openOverlay("Сообщение не отправлено!");
+        console.log ('smth wrong!')
+        // const failOverlay = openOverlay("Сообщение не отправлено!");
 
-        document.body.appendChild(failOverlay);
+        // document.body.appendChild(failOverlay);
 
-        function openOverlay(content) {
-        const overlayElement = document.createElement("div");
-        overlayElement.classList.add("orderoverlay");
+        // function openOverlay(content) {
+        // const overlayElement = document.createElement("div");
+        // overlayElement.classList.add("orderoverlay");
 
-        const containerElement = document.createElement("div");
-        containerElement.classList.add("overlaycontainer");
+        // const containerElement = document.createElement("div");
+        // containerElement.classList.add("overlaycontainer");
 
-        const contentElement = document.createElement("div");
-        contentElement.classList.add("orderoverlay__content");
+        // const contentElement = document.createElement("div");
+        // contentElement.classList.add("content");
 
-        const textElement = document.createElement("div");
-        textElement.classList.add("overlaytext");
-        textElement.innerHTML = content;
+        // const textElement = document.createElement("div");
+        // textElement.classList.add("overlaytext");
+        // textElement.innerHTML = content;
 
-        const closeElement = document.createElement("button");
-        closeElement.classList.add("button");
-        closeElement.classList.add("button--red");
-        closeElement.classList.add("button--marginbottom");
-        closeElement.textContent = "закрыть";
-        closeElement.addEventListener("click", function(e) {
-            e.preventDefault ();
-            document.body.removeChild(overlayElement);
-        });
+        // const closeElement = document.createElement("button");
+        // closeElement.classList.add("button");
+        // closeElement.classList.add("button--overlay");
+        // closeElement.textContent = "закрыть";
+        // closeElement.addEventListener("click", function(e) {
+        //     e.preventDefault ();
+        //     document.body.removeChild(overlayElement);
+        // });
 
-        overlayElement.appendChild(containerElement);
-        containerElement.appendChild(contentElement);
-        contentElement.appendChild(textElement);
-        contentElement.appendChild(closeElement);
+        // overlayElement.appendChild(containerElement);
+        // containerElement.appendChild(contentElement);
+        // contentElement.appendChild(textElement);
+        // contentElement.appendChild(closeElement);
 
-         return overlayElement;
-        }
+        //  return overlayElement;
+        // }
 
     }
 
@@ -112,8 +111,22 @@ loginBtn.addEventListener('click', function (e) {
     }
 
     function validateField(field){
+
+        field.nextElementSibling.textContent = '';
+        field.nextElementSibling.classList.remove('errorMessage');
+        field.classList.remove('form__input-field--error');
+        field.previousElementSibling.firstElementChild.classList.remove('form__input-icon--error');
+
         if (!field.checkValidity()){
             field.nextElementSibling.textContent = field.validationMessage;
+            
+            field.nextElementSibling.classList.remove('error');
+            field.nextElementSibling.classList.add('errorMessage');
+            field.classList.add('form__input-field--error');
+            field.previousElementSibling.firstElementChild.classList.add('form__input-icon--error');
+            // var svgImg = document.querySelector ('.form__input-pic--error');
+            // svgImg.firstElementChild.classList.add('form__input-icon--error');
+
             return false;
         } else {
             field.nextElementSibling.textContent = '';

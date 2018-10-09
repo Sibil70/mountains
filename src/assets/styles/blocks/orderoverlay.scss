@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(62, 64, 65);
+    background: $light-grey;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,11 +13,13 @@
   
   .overlaycontainer {
     position: relative;
+    width: 200px;
+    height: 180px;
   }
   
-  .orderoverlay__content {
+  .content {
     width: 200px;
-    background: #fff;
+    background: $white;
     border-radius: 5px;
     color: black;
     font-weight: 300;
@@ -31,6 +33,6 @@
   .overlaytext {
       margin: 20px auto;
   }
-  .button--marginbottom{
+  .button--overlay{
       margin-bottom: 20px;
   }

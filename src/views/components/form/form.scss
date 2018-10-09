@@ -6,6 +6,7 @@
 .form__input{
     display: flex;
     margin-bottom: 20px;
+    position: relative;
 
 }
 .form__input-pic{
@@ -23,6 +24,9 @@
     height: 25px;
     &:hover{
         fill:$green;
+    }
+    &--error{
+        fill: red;
     }
 }
 .form__input-field{
@@ -42,6 +46,9 @@
     }
     @include phones {
         width: 220px;
+    }
+    &--error{
+        border: 1px solid red;
     }
 }
 .form__chkbox{
