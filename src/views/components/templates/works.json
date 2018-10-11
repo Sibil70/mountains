@@ -3,21 +3,21 @@
       "id": 1,
       "title" : "Сайт фитнес центра",
       "skills" : " HTML, CSS",
-      "photo" : "./assets/images/content/fitness1.jpg",
+      "photo" : "./assets/images/content/slider1.png",
       "link" : "https://sibil70.github.io/AFrodita/"
     },
     {
       "id": 2,
       "title" : "Сайт магазина бургеров",
       "skills" : "Html, SCSS, JS, JQuerry, YandexApi",
-      "photo" : "./assets/images/content/burger1.jpg",
+      "photo" : "./assets/images/content/slider2.png",
       "link" : "https://sibil70.github.io/Burgers/"
     },
     {
       "id": 3,
       "title" : "Сайт портфолио",
       "skills" : "Pug, SCSS, JS, Vue.js, Gulp, npm",
-      "photo" : "./assets/images/content/portf4.jpg",
+      "photo" : "./assets/images/content/slider3.png",
       "link" : "https://sibil70.github.io/mountains/dist/index.html"
     }
   ]
