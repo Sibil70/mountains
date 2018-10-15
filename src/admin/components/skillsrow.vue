@@ -9,10 +9,11 @@
                 :skill="skill"
             )
             skillitem(
-                :editmode = "true"
+                :editmode = "true",
+                :typeId="type.id"
+                :key="type.id"
             )
             hr
-            br
             hr
 </template>
 
@@ -30,6 +31,10 @@ export default {
         skills: {
             type: Array,
             default: ()=>[]
+        },
+        typeId: {
+            type: Number,
+            default: 0
         }
     }
 }

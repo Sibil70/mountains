@@ -1,5 +1,6 @@
 <template lang="pug">
   div.skills
+    app-form
     h2.skills__title Страница "Обо мне"
     skills-row(
         v-for="type in types"
@@ -10,10 +11,12 @@
 </template>
 
 <script>
+import form from "./auth";
 import skillsRow from "./skillsrow";
 export default {
     components: {
-        skillsRow
+        skillsRow,
+        appForm: form
     },
     props:{
         skills: {
