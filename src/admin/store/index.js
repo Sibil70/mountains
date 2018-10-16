@@ -6,5 +6,5 @@ Vue.use(Vuex);
 import skills from "./modules/skills"
 
 export default new Vuex.Store({
-    modules: {        skills    }
+    modules: { skills }
 });
