@@ -1,14 +1,20 @@
 <template lang="pug">
   div.admin-app
     app-header
-      .header
-        app-header
     tabs
       .tabs
-    skills(
-      :skills="skills"
-    )
-      .tabs
+    .container-components
+      router-view
+      //- skills(
+      //-   :skills="skills"
+      //- )
+      //-   .tabs
+      //- blogs(
+      //-   :blogs="blogs"
+      //- )
+      //- works(
+      //-   :works="works"
+      //- )
 </template>
 
 <script>
@@ -17,22 +23,13 @@
 // import skills from "./components/skills";
 import {mapActions, mapState} from "vuex";
 
-
-// const data = [
-//   {id:1, title:"Html", percent: 20, category: 0 },
-//   {id:2, title:"PHP", percent: 25, category: 1 },
-//   {id:3, title:"CSS", percent: 20, category: 0 },
-//   {id:4, title:"Node.js", percent: 30, category: 1 },
-//   {id:5, title:"Mongo", percent: 20, category: 1 },
-//   {id:6, title:"Git", percent: 45, category: 2 },
-//   {id:7, title:"Gulp", percent: 20, category: 2 }
-// ];
-
 export default {
   components: {
     appHeader: require("./components/header").default,
     tabs: require("./components/tabs").default,
-    skills: require("./components/skills").default
+    skills: require("./components/skills").default,
+    blogs: require("./components/blogs").default,
+    works: require("./components/works").default
 
   },
   computed:{

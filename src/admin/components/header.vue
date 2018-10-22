@@ -1,7 +1,7 @@
 <template lang="pug">
   div.header
     h2.header__title Панель администрирования
-    a.header__link(href="//google.com") Вернуться на сайт
+    a.header__link(href="#") Вернуться на сайт
 </template>
 <script>
 export default {

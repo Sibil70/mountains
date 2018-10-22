@@ -3,9 +3,9 @@
         td {{skill.title}}
         td {{skill.percents}} %
         td
-            button(type="button") &#9998 
+            button(type="button").button.button--edit &#9998 
         td
-            button(type="button" @click="removeSkill(skill.id)") &#10006
+            button(type="button" @click="removeSkill(skill.id)").button.button--delete &#10006
     tr(v-else)
         td
             input(type="text" placeholder="newskill"
@@ -34,7 +34,7 @@ export default {
       newSkill: {
         title: "",
         percents: 0,
-        category: this.typeId
+        category: 0
       }
     };
   },
@@ -46,3 +46,21 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+  .button {
+      font-size: 22px;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+
+      &--edit {
+        transform: rotate(90deg);
+        color: grey;
+        margin-bottom: 10px;
+      }
+      &--delete {
+        color: red;
+      }
+    }
+</style>
+
