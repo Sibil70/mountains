@@ -9,7 +9,8 @@ import blogs from "./modules/blogs"
 
 
 export default new Vuex.Store({
-    modules: { skills,
+    modules: { 
+    skills,
     works,
     blogs }
 });

@@ -12,9 +12,7 @@
                 :editmode = "true",
                 :typeId="type.id"
                 :key="type.id"
-            )
-            hr
-            hr
+            )            
 </template>
 
 <script>
@@ -39,3 +37,9 @@ export default {
     }
 }
 </script>
+<style lang="scss" scoped>
+.skills-row {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+</style>

@@ -5,10 +5,9 @@
       .tabs
     .container-components
       router-view
-      //- skills(
-      //-   :skills="skills"
-      //- )
-      //-   .tabs
+      skills(
+        :skills="skills"
+      )
       //- blogs(
       //-   :blogs="blogs"
       //- )
@@ -18,18 +17,14 @@
 </template>
 
 <script>
-// import header from "./components/header";
-// import tabs from "./components/tabs";
-// import skills from "./components/skills";
+
 import {mapActions, mapState} from "vuex";
 
 export default {
   components: {
     appHeader: require("./components/header").default,
     tabs: require("./components/tabs").default,
-    skills: require("./components/skills").default,
-    blogs: require("./components/blogs").default,
-    works: require("./components/works").default
+    skills: require("./components/skills").default
 
   },
   computed:{
@@ -51,5 +46,8 @@ export default {
   body{
     margin: 0;
     box-sizing: border-box;
+  }
+  .container-components{
+    background-color: greenyellow;
   }
 </style>

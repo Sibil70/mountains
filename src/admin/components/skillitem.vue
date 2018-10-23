@@ -47,6 +47,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+
   .button {
       font-size: 22px;
       cursor: pointer;
