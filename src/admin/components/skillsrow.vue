@@ -12,9 +12,7 @@
                 :editmode = "true",
                 :typeId="type.id"
                 :key="type.id"
-            )
-            hr
-            hr
+            )            
 </template>
 
 <script>
@@ -31,11 +29,18 @@ export default {
         skills: {
             type: Array,
             default: ()=>[]
-        },
-        typeId: {
-            type: Number,
-            default: 0
         }
     }
 }
 </script>
+<style lang="scss" scoped>
+.skills-row {
+    margin-bottom: 30px;
+    font-size: 16px;
+    width: 50%;
+}
+.skills-row__list{
+    margin-left: 20px;
+    border-collapse: collapse;
+}
+</style>

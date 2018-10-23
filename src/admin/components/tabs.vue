@@ -49,8 +49,9 @@ export default {
     &:hover{
         color:#14bea7;
     }
-    &--active{
-       color:#14bea7;
-    }
+
+}
+.router-link-exact-active{
+    color:#14bea7;
 }
 </style>

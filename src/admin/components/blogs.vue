@@ -1,8 +1,6 @@
 <template lang="pug">
   .content-container
     .blogs
-      h2.blogs__title Страница "Блог"
-
       .blogs__content
         blogs-add
         blogs-list(
@@ -37,14 +35,13 @@
 
 <style lang="scss" scoped>
   .blogs {
-    &__title {
-      margin: 0;
-      margin-bottom: 40px;
-      font-size: 21px;
-    }
+    margin-left: 20px;
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #455a64;
     &__content {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       @media (max-width: 980px) {
         flex-direction: column;
         justify-content: flex-start;

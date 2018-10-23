@@ -1,11 +1,15 @@
 <template lang="pug">
   div.header
+    app-form
     h2.header__title Панель администрирования
     a.header__link(href="#") Вернуться на сайт
 </template>
 <script>
+import form from "./auth";
 export default {
-  
+  components:{
+    appForm: form
+  }
 }
 </script>
 <style lang="scss">
