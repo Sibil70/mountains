@@ -6,20 +6,9 @@
     .container-components
       .container__bg
       router-view
-      //- skills(
-      //-   :skills="skills"
-      //- )
-      //- blogs(
-      //-   :blogs="blogs"
-      //- )
-      //- works(
-      //-   :works="works"
-      //- )
 </template>
 
 <script>
-
-// import {mapActions, mapState} from "vuex";
 
 export default {
   components: {
