@@ -24,8 +24,7 @@
         id="file"
         name="file"
       )
-      //- img.file__image(src="../content/download_img.png" alt="Загрузить картинку")
-      span.file__label Загрузить картинку
+      span.file__label &#10010 Загрузить картинку
     button.form__button(
       @click="addNewWork(newWork)"
       type="button"
@@ -70,7 +69,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 10px;
+    margin-right: 30px;
+
     @media (max-width: 980px) {
       margin-bottom: 30px;
     }
@@ -85,6 +85,7 @@
       border: none;
       border-radius: 5px;
       margin-bottom: 20px;
+      outline-color: #14bea7;
       &::placeholder {
         color: rgba(55, 62, 66, 0.5);
       }
@@ -96,7 +97,7 @@
       }
     }
     &__button {
-      background-color: #6c9c5a;
+      background-color: #14bea7;
       padding: 10px 20px;
       color: white;
       border: none;
@@ -109,7 +110,7 @@
         margin-top: 30px;
       }
       &:hover {
-        background-color: #4e8839;
+        background-color: #31ecbb;
       }
     }
   }
@@ -121,12 +122,8 @@
     &__input {
       display: none;
     }
-    &__image {
-      fill: #6c9c5a;
-      margin-right: 10px;
-    }
     &__label {
-      color: #6c9c5a;
+      color: #14bea7;
     }
     &:hover::before {
       opacity: 1;
@@ -142,7 +139,7 @@
       left: 0;
       width: 100%;
       height: 2px;
-      background-color: #4e8839;
+      background-color: #14bea7;
       transition: all 0.2s;
     }
     &::before {

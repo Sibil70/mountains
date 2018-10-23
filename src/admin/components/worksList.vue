@@ -40,7 +40,7 @@
       margin-bottom: 10px;
     }
     &__heading th {
-      border-bottom: 1px solid #6c9c5a;
+      border-bottom: 1px solid #14bea7;
       padding: 20px 0 20px 25px;
       text-align: left;
     }

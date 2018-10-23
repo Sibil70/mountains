@@ -13,7 +13,7 @@
     )
     textarea.form__textarea(
       v-model="newBlog.content"
-      placeholder="Чего-нибудь новенького?"
+      placeholder="Текст блога"
     )
     button.form__button(
       @click="addNewBlog(newBlog)"
@@ -46,7 +46,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 10px;
+    margin-right: 30px;
+
     @media (max-width: 980px) {
       margin-bottom: 30px;
     }
@@ -61,6 +62,7 @@
       border: none;
       border-radius: 5px;
       margin-bottom: 20px;
+      outline-color: #14bea7;
       &::placeholder {
         color: rgba(55, 62, 66, 0.5);
       }
@@ -69,9 +71,11 @@
       border-radius: 5px;
       padding: 12px 20px;
       min-width: 300px;
-      width: 500px;
+      width: 300px;
       height: 150px;
       resize: none;
+      border-color: transparent;
+      outline-color: #14bea7;
       @media (max-width: 550px) {
         width: 380px;
       }
@@ -83,7 +87,7 @@
       }
     }
     &__button {
-      background-color: #6c9c5a;
+      background-color: #14bea7;
       padding: 10px 20px;
       color: white;
       border: none;
@@ -93,7 +97,7 @@
       margin-top: 30px;
       font-weight: 600;
       &:hover {
-        background-color: #4e8839;
+        background-color: #10e9cc;
       }
     }
   }

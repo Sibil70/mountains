@@ -35,7 +35,7 @@
   .blog-item {
     td {
       text-align: left;
-      padding: 30px 0 30px 25px;
+      padding: 5px 0 5px 25px;
       font-size: 16px;
       color: #455a64;
     }
@@ -51,9 +51,14 @@
     &__buttons {
       display: flex;
       flex-direction: column;
-      padding: 30px 40px !important;
+      padding: 5px 15px !important;
     }
-    
+    &:nth-child(odd) {
+    background: lightgray;
+    }
+      tr:nth-child(even) {
+    background: #E8E6D1;
+    }
     .button {
       font-size: 22px;
       cursor: pointer;
