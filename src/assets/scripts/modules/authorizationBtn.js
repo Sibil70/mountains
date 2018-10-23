@@ -1,6 +1,5 @@
 const authBtns = document.querySelectorAll('.js-toggleBtn'),
     cards = document.querySelectorAll('.user');
-    // authBtnDisp = document.querySelector('.authbtn');
 
 authBtns.forEach(function (authBtn) {
     authBtn.addEventListener('click', function (e) {
