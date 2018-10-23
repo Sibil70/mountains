@@ -15,12 +15,12 @@ loginBtn.addEventListener('click', function (e) {
             // human: form.elements.human.value
         };
         // window.location.href = "/admin" 
-
+        
         const xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://webdev-api.loftschool.com/login');
         xhr.send(JSON.stringify(data));
         xhr.addEventListener('load', () => {
-            console.log(xhr.response);
+            console.log("all done!");
         });
 
     } else {

@@ -34,7 +34,7 @@ export default {
       newSkill: {
         title: "",
         percents: 0,
-        category: 0
+        category: this.typeId
       }
     };
   },

@@ -5,9 +5,9 @@
       .tabs
     .container-components
       router-view
-      //- skills(
-      //-   :skills="skills"
-      //- )
+      skills(
+        :skills="skills"
+      )
       //-   .tabs
       //- blogs(
       //-   :blogs="blogs"

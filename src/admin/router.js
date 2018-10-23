@@ -8,6 +8,15 @@ const guard = axios.create({
     baseURL: "https://webdev-api.loftschool.com"
 });
 
+
+import skills from './components/skills.vue';
+import works from './components/works.vue';
+import blogs from './components/blogs.vue';
+
+const SkillsComponent = { template: `<skills></skills>`, components: { skills }};
+const WorksComponent = { template: `<works></works>`, components: { works }};
+const BlogsComponent = { template: `<blogs></blogs>`, components: { blogs }};
+
 const routes = [
     {
         path: "/",
@@ -38,12 +47,5 @@ router.beforeEach((to, from, next)=>{
     })
 })
 
-import skills from './components/skills.vue';
-import works from './components/works.vue';
-import blogs from './components/blogs.vue';
-
-const SkillsComponent = { template: `<skills></skills>`, components: { skills }};
-const WorksComponent = { template: `<works></works>`, components: { works }};
-const BlogsComponent = { template: `<blogs></blogs>`, components: { blogs }};
 
 export default router;
