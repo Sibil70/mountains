@@ -1,20 +1,22 @@
 <template lang="pug">
   tr.work-item
-    td.work-item__name tetsd
-    td.work-item__technologies tetsd
+    td.work-item__name {{ work.title }}
+    td.work-item__technologies {{ work.techs }}
     td.work-item__link
-      a(href="" target="_blank")  asdasd
+      a(:href="work.link" target="_blank")  {{ work.link }}
     td.work-item__image
-      img(src="" alt="Изображение проекта")
-    td.work-item__buttons
-      button(
-        @click="editWork(work.id)"
-        type="button"
-      ).button.button--edit &#9998
-      button(
-        @click="removeWork(work.id)"
-        type="button"
-      ).button.button--delete &#10006
+      .work-item__image--overlay
+        img#image(:src="`https://webdev-api.loftschool.com/${work.photo}`" alt="Изображение проекта")
+    td
+      .work-item__buttons
+        button(
+          @click="handleClick"
+          type="button"
+        ).button.button--edit
+        button(
+          @click="removeWork(work.id)"
+          type="button"
+        ).button.button--delete
 </template>
 
 <script>
@@ -27,11 +29,18 @@
         default: () => {}
       }
     },
+    data() {
+      return {
+        editMode: false
+      }
+    },
     methods: {
       ...mapActions({
         editWork: 'works/edit',
         removeWork: 'works/remove'
-      })
+      }),
+      handleClick() {
+        this.$emit('fillFormData', this.work)      }
     }
   }
 </script>
@@ -67,7 +76,10 @@
       flex-direction: column;
       padding: 30px 40px !important;
     }
-    
+    #image {
+      max-width: 120px;
+      max-height: 120px;
+    }
     .button {
       font-size: 22px;
       cursor: pointer;

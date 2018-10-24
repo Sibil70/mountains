@@ -1,6 +1,6 @@
 <template lang="pug">
   form.form
-    h3.form__title Добавить работу
+    h3.form__title(v-text="mode ? 'Изменить работу' : 'Добавить работу'")
     input.form__input(
       v-model="newWork.title"
       type="text"
@@ -20,15 +20,16 @@
       input.file__input(
         @change="handleFiles"
         type="file"
-        ref="myFiles"
         id="file"
         name="file"
       )
-      span.file__label &#10010 Загрузить картинку
+      //- img.file__image(src="/download_img.png" alt="Загрузить картинку")
+      span.file__label(v-text="mode ? 'Изменить картинку' : 'Загрузить картинку'")
     button.form__button(
-      @click="addNewWork(newWork)"
+      v-text="mode ? 'Сохранить изменения' : 'Добавить'"
+      @click="mode ? editExistedWork(newWork) : addNewWork(newWork)"
       type="button"
-    ) Добавить
+    )
 
 </template>
 
@@ -39,6 +40,10 @@
       work: {
         type: Object,
         default: () => {}
+      },
+      editMode: {
+        type: Boolean,
+        default: false
       }
     },
     data() {
@@ -47,19 +52,41 @@
           title: '',
           techs: '',
           link: '',
-          photo: ''
-        }
+          photo: {}
+        },
+        mode: this.editMode
+      }
+    },
+    watch: {
+      work() {
+        this.newWork.id = this.work.id;
+        this.newWork.title = this.work.title;
+        this.newWork.techs = this.work.techs;
+        this.newWork.link = this.work.link;
+        document.querySelector('.file__image').src = `https://webdev-api.loftschool.com/${this.work.photo}`
+        this.mode = true;
       }
     },
     methods: {
-      handleFiles(evt) {
-        const file = evt.target.files;
-        if (file.length === 0) return;
-        this.newWork.photo = file[0];
+      handleFiles(event) {
+        const file = event.target.files[0];
+        // if (file.length === 0) return;
+        this.newWork.photo = file;
       },
       ...mapActions({
-        addNewWork: 'works/add'
-      })
+        addNewWork: 'works/add',
+        editWork: 'works/edit'
+      }),
+      editExistedWork(work) {
+        this.editWork(work).then(
+          () => {
+            Object.keys(this.newWork).forEach(key => this.newWork[key] = '');
+            document.querySelector('.file__image').src = '/download_img.png';
+            this.mode = false;
+          }).catch(error => {
+            alert(error);
+          });
+      }
     }
   }
 </script>

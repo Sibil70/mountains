@@ -20,9 +20,13 @@ const works = {
         );
       },
       add({commit}, work) {
-        this.$axios.post('/works', work).then(
+        const formData = new FormData();
+
+        Object.keys(work).forEach(key => formData.append(key, work[key]));
+        console.log (work)
+        this.$axios.post('/works', formData).then(
           response => {
-            commit('addNewWork', response.data);
+            // commit('addNewWork', response.data);
           },
           error => {
             console.error(error)
