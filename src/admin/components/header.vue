@@ -2,7 +2,7 @@
   div.header
     app-form
     h2.header__title Панель администрирования
-    a.header__link(href="#") Вернуться на сайт
+    a.header__link(href="./index.html") Вернуться на сайт
 </template>
 <script>
 import form from "./auth";
