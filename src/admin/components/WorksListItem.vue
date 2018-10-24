@@ -12,11 +12,11 @@
         button(
           @click="handleClick"
           type="button"
-        ).button.button--edit
+        ).button.button--edit &#9998
         button(
           @click="removeWork(work.id)"
           type="button"
-        ).button.button--delete
+        ).button.button--delete &#10006
 </template>
 
 <script>
