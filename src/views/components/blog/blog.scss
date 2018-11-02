@@ -10,9 +10,33 @@
   margin-right: 98px;
   position: sticky;
   top: 2rem;
-  // @include tablets {
-  //   display: block;
-  // }
+  @include narrow {
+    margin-right: 20px;
+  }
+  @include tablets {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    margin: 0;
+    background-color: $green;
+    width: 280px;
+
+  }
+}
+.blog-menu__button{
+  display: none;
+  @include tablets {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: -25px;
+    background: $green;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: .5;
+  }
 }
 .blog-menu__item {
   text-align: right;
@@ -45,7 +69,9 @@
   &:hover {
     color: #00bfa5;
     transition: .3s;
-
+    @include tablets {
+      color: white;
+    }
   }
 }
 

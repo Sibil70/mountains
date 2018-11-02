@@ -1,7 +1,9 @@
 .articles{
   @include tablets{
     margin:0 4%;
+    margin-left: 25px;
   }
+
 }
 .articles__item {
   border-bottom: 5px solid #00bfa5;

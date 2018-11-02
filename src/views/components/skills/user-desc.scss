@@ -12,7 +12,8 @@
         width: 24.5rem;
     }
     @include phones {
-        width: 300px;
+        width: 100%;
+        height: 250px;
     }
 }
 .user-desc__pic-img{

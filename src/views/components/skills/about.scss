@@ -35,17 +35,24 @@
 }
 .about__title{
     margin-bottom: 40px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 200px;
+    @include phones{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 }
 .about__title-icon{
     width: 150%;
     opacity: 0.1;
     position: absolute;
-    left: -35%;
-    top: -35%;
+    @include phones {
+        width: 100%;
+        left:0%;
+    }
 }
 .about__content {
     width: 28.125rem;

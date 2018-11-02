@@ -9,18 +9,26 @@
   }
 }
 .reviews__title {
-  // background: $white;
-  // background: #faf8f0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
+  height: 170px;
+  position: relative;
   @include phones {
     width: 250px;
     text-align: center;
   }
 }
-
+.reviews__title-icon{
+  opacity: 0.1;
+  position: absolute;
+  @include phones {
+    width: 100%;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+  }
+}
 .reviews__container {
   width: 100%;
   display: flex;

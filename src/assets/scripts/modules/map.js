@@ -194,6 +194,19 @@ var initMap = function () {
       }
     ]
   });
+  window.onresize = function (){
+    var width = document.documentElement.clientWidth;
+     console.log(width);
+      if (width<480) {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 60.001596, lng: 30.299642},
+          zoom: 15,
+          scrollwheel: false,
+          disableDefaultUI: true
+        }
+  )}
+  };
+  
 
   var image = {
     url: './assets/images/content/map_marker.svg'
@@ -212,4 +225,6 @@ function toggleBounce() {
     marker.setAnimation(google.maps.Animation.BOUNCE);
   }
 }
+
+
 initMap();

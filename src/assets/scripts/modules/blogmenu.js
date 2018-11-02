@@ -1,15 +1,27 @@
-// const aside = document.querySelector ('.blog-menu');
 const items = document.querySelectorAll('.blog-menu__item');
 const btns = document.querySelectorAll('.blog-menu__btn');
 const posts = document.querySelectorAll('.article');
+const menuBtn = document.querySelector('.blog-menu__button');
+let menuShown = true;
 
-//сдвигаем aside влево на ширину блока
+function showMenu() {
+  const aside = document.querySelector('.blog-menu');
 
-// (function hideAside () {
-//   const asideWidth = aside.clientWidth;
-//   aside.style.position = 'absolute';
-//   aside.style.left = -asideWidth +'px';
-// }());
+  console.log (menuShown);
+    switch(menuShown) {
+      case true: aside.style.left = 0 + 'px';
+      menuBtn.style.left = 250 + 'px';
+      menuShown = false;
+      break;
+      case false: aside.style.left = -300 + 'px';
+      menuBtn.style.left = -25 + 'px';
+      menuShown = true;
+      break;
+    }
+}
+
+menuBtn.addEventListener('click', showMenu);
+
 
 //Находим все кнпоки меню
 for (let i = 0; i < btns.length; i++) {
@@ -21,7 +33,7 @@ for (let i = 0; i < btns.length; i++) {
 
     let data_id = this.dataset.id;
     let parent = this.parentNode;
-    
+
     for (let i = 0; i < items.length; i++) {
       const item = items[i];
       item.classList.remove("blog-menu__item--active");
@@ -42,3 +54,19 @@ for (let i = 0; i < btns.length; i++) {
     }
   }
 }
+
+//сдвигаем aside влево на ширину блока
+
+// window.addEventListener("resize", hideAside);
+
+// function hideAside() {
+//   let screenWidth = document.documentElement.clientWidth;
+//     if (screenWidth < 768) {
+//       const asideWidth = aside.clientWidth;
+//       // aside.style.position = 'absolute';
+//       aside.style.left = -asideWidth + 'px';
+//     } else {
+//       // aside.style.position = 'sticky';
+//       aside.style.left = 'initial';
+//     }
+// }
