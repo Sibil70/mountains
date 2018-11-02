@@ -6,6 +6,8 @@
 .user-desc__pic{
     width: 28.125rem;
     margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
     @include narrow {
         width: 24.5rem;
     }

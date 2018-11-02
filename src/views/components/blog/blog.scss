@@ -10,9 +10,9 @@
   margin-right: 98px;
   position: sticky;
   top: 2rem;
-  @include tablets {
-    display: none;
-  }
+  // @include tablets {
+  //   display: block;
+  // }
 }
 .blog-menu__item {
   text-align: right;

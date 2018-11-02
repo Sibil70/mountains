@@ -1,6 +1,15 @@
+// const aside = document.querySelector ('.blog-menu');
 const items = document.querySelectorAll('.blog-menu__item');
 const btns = document.querySelectorAll('.blog-menu__btn');
 const posts = document.querySelectorAll('.article');
+
+//сдвигаем aside влево на ширину блока
+
+// (function hideAside () {
+//   const asideWidth = aside.clientWidth;
+//   aside.style.position = 'absolute';
+//   aside.style.left = -asideWidth +'px';
+// }());
 
 //Находим все кнпоки меню
 for (let i = 0; i < btns.length; i++) {
