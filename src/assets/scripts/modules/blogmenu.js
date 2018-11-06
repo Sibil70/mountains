@@ -2,6 +2,7 @@ const items = document.querySelectorAll('.blog-menu__item');
 const btns = document.querySelectorAll('.blog-menu__btn');
 const posts = document.querySelectorAll('.article');
 const menuBtn = document.querySelector('.blog-menu__button');
+const articles = document.querySelector('.articles')
 let menuShown = true;
 
 function showMenu() {
@@ -21,7 +22,10 @@ function showMenu() {
 }
 
 menuBtn.addEventListener('click', showMenu);
-
+articles.addEventListener ('click', function (e){
+  e.preventDefault();
+  showMenu();
+});
 
 //Находим все кнпоки меню
 for (let i = 0; i < btns.length; i++) {

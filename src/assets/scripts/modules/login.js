@@ -45,24 +45,24 @@ loginBtn.addEventListener('click', function (e) {
 
     function validateField(field) {
 
-        field.nextElementSibling.textContent = '';
-        field.nextElementSibling.classList.remove('errorMessage');
-        field.classList.remove('form__input-field--error');
-        field.previousElementSibling.firstElementChild.classList.remove('form__input-icon--error');
+        // field.nextElementSibling.textContent = '';
+        // field.nextElementSibling.classList.remove('errorMessage');
+        // field.classList.remove('form__input-field--error');
+        // field.previousElementSibling.firstElementChild.classList.remove('form__input-icon--error');
 
         if (!field.checkValidity()) {
-            field.nextElementSibling.textContent = field.validationMessage;
-            field.nextElementSibling.classList.remove('error');
-            field.nextElementSibling.classList.add('errorMessage');
-            field.classList.add('form__input-field--error');
-            field.previousElementSibling.firstElementChild.classList.add('form__input-icon--error');
-            setTimeout(() => {
-                field.nextElementSibling.textContent = '';
-                field.nextElementSibling.classList.remove('errorMessage');
-            }, 2000)
+            // field.nextElementSibling.textContent = field.validationMessage;
+            // field.nextElementSibling.classList.remove('error');
+            // field.nextElementSibling.classList.add('errorMessage');
+            // field.classList.add('form__input-field--error');
+            // field.previousElementSibling.firstElementChild.classList.add('form__input-icon--error');
+            // setTimeout(() => {
+            //     field.nextElementSibling.textContent = '';
+            //     field.nextElementSibling.classList.remove('errorMessage');
+            // }, 2000)
             return false;
         } else {
-            field.nextElementSibling.textContent = '';
+            // field.nextElementSibling.textContent = '';
             return true;
         }
     }
