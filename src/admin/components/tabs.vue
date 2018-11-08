@@ -38,6 +38,7 @@ export default {
     list-style: none;
     cursor: pointer;
     border-right: 2px solid #f9f9f8;
+ 
     
 }
 .tabs__text{
@@ -45,7 +46,10 @@ export default {
     text-decoration: none;
     font-weight: 600;
     color: #67787f;
-
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    text-align: center;
     &:hover{
         color:#14bea7;
     }

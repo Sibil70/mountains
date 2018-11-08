@@ -9,7 +9,7 @@
     input.form__input(
       v-model="newBlog.date"
       type="text"
-      placeholder="Дата"
+      placeholder="ММ/ДД/ГГГГ"
     )
     textarea.form__textarea(
       v-model="newBlog.content"

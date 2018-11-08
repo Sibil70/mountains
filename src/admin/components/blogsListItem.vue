@@ -1,7 +1,7 @@
 <template lang="pug">
   tr.blog-item
     td.blog-item__name {{ blog.title }}
-    td.blog-item__date {{ blog.updated_at.slice(0, 10) }}
+    td.blog-item__date {{ timeConverted }}
     td.blog-item__content {{ blog.content }}
     td.blog-item__buttons
       button(
@@ -21,6 +21,17 @@
       blog: {
         type: Object,
         default: () => {}
+      }
+    },
+    computed:{
+      timeConverted: function(){
+        var a = new Date(this.blog.date * 1000);
+        var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        var year = a.getFullYear();
+        var month = months[a.getMonth()];
+        var date = a.getDate();
+        var time = date + ' ' + month + ' ' + year;
+        return time;
       }
     },
     methods: {

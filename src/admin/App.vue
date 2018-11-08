@@ -30,6 +30,7 @@ export default {
   }
   .container-components{
     position: relative;
+    padding-bottom: 20px;
   }
 
   .container__bg{
@@ -39,7 +40,7 @@ export default {
     filter: opacity(.3);
     width: 100%;
     height: 100%;
-    min-height: 77vh;
+    min-height: 78vh;
     position: absolute;
     z-index: -100;
   top: 0;

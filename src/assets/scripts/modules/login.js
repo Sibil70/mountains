@@ -1,7 +1,10 @@
 // import axios from 'axios';
 
-const form = document.querySelector('#authform');
-const loginBtn = document.querySelector('#loginBtn');
+const   form = document.querySelector('#authform'),
+        loginBtn = document.querySelector('#loginBtn'),
+        authBtn = document.querySelectorAll('.js-toggleBtn'),
+        cards = document.querySelectorAll('.user');
+    // authBtnDisp = document.querySelector('.authbtn');
 
 
 loginBtn.addEventListener('click', function (e) {
@@ -20,7 +23,7 @@ loginBtn.addEventListener('click', function (e) {
         xhr.open('POST', 'https://webdev-api.loftschool.com/login');
         xhr.send(JSON.stringify(data));
         xhr.addEventListener('load', () => {
-            console.log("all done!");
+            console.log("well done!");
         });
 
     } else {
@@ -51,19 +54,50 @@ loginBtn.addEventListener('click', function (e) {
         // field.previousElementSibling.firstElementChild.classList.remove('form__input-icon--error');
 
         if (!field.checkValidity()) {
-            // field.nextElementSibling.textContent = field.validationMessage;
-            // field.nextElementSibling.classList.remove('error');
-            // field.nextElementSibling.classList.add('errorMessage');
-            // field.classList.add('form__input-field--error');
-            // field.previousElementSibling.firstElementChild.classList.add('form__input-icon--error');
-            // setTimeout(() => {
-            //     field.nextElementSibling.textContent = '';
-            //     field.nextElementSibling.classList.remove('errorMessage');
-            // }, 2000)
+            field.nextElementSibling.textContent = field.validationMessage;
+            field.nextElementSibling.classList.remove('error');
+            field.nextElementSibling.classList.add('errorMessage');
+            field.classList.add('form__input-field--error');
+            field.previousElementSibling.firstElementChild.classList.add('form__input-icon--error');
+            setTimeout(() => {
+                field.nextElementSibling.textContent = '';
+                field.nextElementSibling.classList.remove('errorMessage');
+                field.previousElementSibling.firstElementChild.classList.remove('form__input-icon--error');
+                field.classList.remove('form__input-field--error');
+            }, 2000)
             return false;
         } else {
-            // field.nextElementSibling.textContent = '';
+            field.nextElementSibling.textContent = '';
             return true;
         }
     }
 })
+
+
+authBtn.forEach(function (authBtn) {
+    authBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        cards.forEach(function (card) {
+            if (!card.classList.contains('js-toggle')) {
+                card.classList.add('js-toggle');
+            } else {
+                card.classList.remove('js-toggle');
+            }
+        })
+    });
+});
+
+
+const getUrl = (function(){
+    const hash = window.location.href.slice(window.location.href.indexOf('?')+1);
+    console.log(hash);
+
+            if (hash == 'auth') {
+        var card = document.querySelector('.user--front');
+                card.classList.add('js-toggle');
+        var cardBack = document.querySelector('.user--back');
+                cardBack.classList.remove('js-toggle');
+    }
+})();
+
+module.exports = getUrl;

@@ -1,28 +1,29 @@
-const blurelwraper = document.querySelector('.feedback__blur'),
-      blurelem = document.querySelector('.feedback__blur-elem'),
-      formelem = document.querySelector('.feedback-form');
+const blurElWraper = document.querySelector('.feedback__blur'),
+      blurElem = document.querySelector('.feedback__blur-elem'),
+      formElem = document.querySelector('.feedback-form'),
+      reviewsBg = document.querySelector('.reviews');
 
-const width = getComputedStyle(formelem).width;
-const height = getComputedStyle(formelem).height;
+let width = getComputedStyle(formElem).width;
+let height = getComputedStyle(formElem).height;
 
-blurelwraper.style.width = width;
-blurelwraper.style.height = height;
+blurElWraper.style.width = width;
+blurElWraper.style.height = height;
 
-const reviewsbg = document.querySelector('.reviews');
-const bgwidth = getComputedStyle(reviewsbg).width;
-const bgheight = getComputedStyle(reviewsbg).height;
 
-blurelem.style.backgroundSize = bgwidth;
+let bgWidth = getComputedStyle(reviewsBg).width;
+let bgHeight = getComputedStyle(reviewsBg).height;
+
+blurElem.style.backgroundSize = bgWidth;
 
 var blur = (function () {
     
     return {
         set: function (){
-            var posLeft = -blurelwraper.offsetLeft,
-                posTop = -blurelwraper.offsetTop,
-                imgWidth = bgwidth,
-                imgHeight = bgheight,
-                blurCSS = blurelem.style;
+            var posLeft = -blurElWraper.offsetLeft,
+                posTop = -blurElWraper.offsetTop,
+                imgWidth = bgWidth,
+                imgHeight = bgHeight,
+                blurCSS = blurElem.style;
             
             blurCSS.backgroundPosition = `${posLeft}px ${posTop}px`;
             blurCSS.backgroundSize = `${imgWidth}px ${imgHeight}px`;
