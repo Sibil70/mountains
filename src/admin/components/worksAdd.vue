@@ -25,6 +25,7 @@
       )
       //- img.file__image(src="/download_img.png" alt="Загрузить картинку")
       span.file__label(v-text="mode ? 'Изменить картинку' : 'Загрузить картинку'")
+
     button.form__button(
       v-text="mode ? 'Сохранить изменения' : 'Добавить'"
       @click="mode ? editExistedWork(newWork) : addNewWork(newWork)"

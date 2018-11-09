@@ -7,11 +7,17 @@
         td.skill-item__delete
             button(type="button" @click="removeSkill(skill.id)").button.button--delete &#10006
     div(v-else)
+      form(
+        @submit.prevent="checkForm"
+        )
+        div.skill-item__addError(v-if="errors.length") Incorrect:
+          ul
+            li(v-for="error in errors") {{error}}
         input(type="text" placeholder="newskill"
             v-model="newSkill.title").skill-item__add
-        input(type="text" placeholder="percents"
+        input(type="number" placeholder="percents"
             v-model="newSkill.percents").skill-item__add
-        button(type="button" @click="addNewSkill(newSkill)").skill-item__addBtn Добавить
+        button(type="submit" @click="addNewSkill(newSkill)").skill-item__addBtn Добавить
 </template>
 <script>
 import { mapActions } from "vuex";
@@ -32,8 +38,9 @@ export default {
   },
   data() {
     return {
+      errors: [],
       newSkill: {
-        title: "",
+        title: '',
         percents: '',
         category: this.typeId
       }
@@ -42,8 +49,19 @@ export default {
   methods: {
     ...mapActions({
       addNewSkill: "skills/add",
-      removeSkill: "skills/remove"
-    })
+      removeSkill: "skills/remove",
+    }),
+    checkForm:function(e) {
+      this.errors = [];
+      if(this.newSkill.title && this.newSkill.percents) {
+        return false;
+        }
+      if(!this.newSkill.title) this.errors.push("title required!");
+
+      if(!this.newSkill.percents || this.newSkill.percents <= 0) this.errors.push("percents required!");
+      if(this.newSkill.percents <= 0) this.errors.push("percents must be more than 0!");
+      e.preventDefault();
+    }
   }
 };
 </script>
@@ -74,6 +92,7 @@ export default {
 .skill-item__add {
   margin-right: 5px;
   width: 100px;
+  margin-bottom: 5px;
 }
 .skill-item__addBtn {
   background-color: #14bea7;
@@ -84,6 +103,9 @@ export default {
   cursor: pointer;
   transition: all 0.2s;
   font-weight: 600;
+}
+.skill-item__addError{
+  color: red;
 }
 </style>
 

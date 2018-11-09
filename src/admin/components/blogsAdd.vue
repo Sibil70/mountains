@@ -1,31 +1,42 @@
 <template lang="pug">
-  form.form
+  form.form(
+    @submit.prevent="checkForm"
+    )
     h3.form__title Добавить запись
     input.form__input(
       v-model="newBlog.title"
       type="text"
       placeholder="Название поста"
     )
-    input.form__input(
+    masked-input.form__input(
       v-model="newBlog.date"
+      mask="11/11/1111"
       type="text"
       placeholder="ММ/ДД/ГГГГ"
-    )
+      )
     textarea.form__textarea(
       v-model="newBlog.content"
       placeholder="Текст блога"
     )
+    div.blog-item__addError(v-if="errors.length") Incorrect:
+      ul
+        li(v-for="error in errors") {{error}}
     button.form__button(
       @click="addNewBlog(newBlog)"
-      type="button"
+      type="submit"
     ) Добавить
 </template>
 
 <script>
   import { mapActions } from 'vuex';
+  import MaskedInput from 'vue-masked-input';
   export default {
+    components: {
+      MaskedInput
+    },
     data() {
       return {
+        errors: [],
         newBlog: {
           title: '',
           date: '',
@@ -36,7 +47,18 @@
     methods: {
       ...mapActions({
         addNewBlog: 'blogs/add'
-      })
+      }),
+    checkForm:function(e) {
+      this.errors = [];
+      if(this.newBlog.title && this.newBlog.percents) {
+        return false;
+        }
+      if(!this.newBlog.title) this.errors.push("title required!");
+
+      if(!this.newBlog.date) this.errors.push("date required!");
+      if(!this.newBlog.content) this.errors.push("content required!");
+      e.preventDefault();
+    }
     }
   }
 </script>
@@ -101,4 +123,7 @@
       }
     }
   }
+  .blog-item__addError {
+  color: red;
+}
 </style>
